@@ -1,0 +1,7 @@
+  Theme : Slanted
+Version : 1.0.0
+ Author : Alexander "Alx" Agnarson - http://alxmedia.se
+
+February 16 2016 - 1.0.0
+===========================================================
+- Theme released
