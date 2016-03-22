@@ -8,7 +8,7 @@
 		</div>
 		
 		<div class="entry">
-			<p><?php _e( 'The page you are trying to reach does not exist, or has been moved. Please use the menus or the search box to find what you are looking for.', 'slanted' ); ?></p>
+			<p><?php esc_html_e( 'The page you are trying to reach does not exist, or has been moved. Please use the menus or the search box to find what you are looking for.', 'slanted' ); ?></p>
 		</div>
 		
 	</div><!--/.pad-->

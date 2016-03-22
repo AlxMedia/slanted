@@ -19,7 +19,7 @@ $featured = new WP_Query(
 		<?php get_template_part('content'); ?>
 	<?php endwhile; ?>
 	</div>
-	<h3 class="featured"><?php _e( 'Featured', 'slanted' ); ?></h3>
+	<h3 class="featured"><?php esc_html_e( 'Featured', 'slanted' ); ?></h3>
 	
 <?php endif; ?>
 <?php wp_reset_postdata(); ?>

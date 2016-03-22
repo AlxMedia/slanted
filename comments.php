@@ -4,11 +4,11 @@
 	
 	<?php if ( have_comments() ) : global $wp_query; ?>
 	
-		<h3 class="heading"><?php comments_number( __( 'No Responses', 'slanted' ), __( '1 Response', 'slanted' ), __( '% Responses', 'slanted' ) ); ?></h3>
+		<h3 class="heading"><?php comments_number( esc_html__( 'No Responses', 'slanted' ), esc_html__( '1 Response', 'slanted' ), esc_html__( '% Responses', 'slanted' ) ); ?></h3>
 	
 		<ul class="comment-tabs group">
-			<li class="active"><a href="#commentlist-container"><i class="fa fa-comments-o"></i><?php _e( 'Comments', 'slanted' ); ?><span><?php echo count($wp_query->comments_by_type['comment']); ?></span></a></li>
-			<li><a href="#pinglist-container"><i class="fa fa-share"></i><?php _e( 'Pingbacks', 'slanted' ); ?><span><?php echo count($wp_query->comments_by_type['pings']); ?></span></a></li>
+			<li class="active"><a href="#commentlist-container"><i class="fa fa-comments-o"></i><?php esc_html_e( 'Comments', 'slanted' ); ?><span><?php echo count($wp_query->comments_by_type['comment']); ?></span></a></li>
+			<li><a href="#pinglist-container"><i class="fa fa-share"></i><?php esc_html_e( 'Pingbacks', 'slanted' ); ?><span><?php echo count($wp_query->comments_by_type['pings']); ?></span></a></li>
 		</ul>
 
 		<?php if ( ! empty( $comments_by_type['comment'] ) ) { ?>

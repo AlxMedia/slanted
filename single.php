@@ -14,7 +14,7 @@
 				
 				<div class="entry">	
 					<?php the_content(); ?>
-					<?php wp_link_pages(array('before'=>'<div class="post-pages">'.__('Pages:','slanted'),'after'=>'</div>')); ?>
+					<?php wp_link_pages(array('before'=>'<div class="post-pages">'.esc_html__('Pages:','slanted'),'after'=>'</div>')); ?>
 					<div class="clear"></div>				
 				</div><!--/.entry-->
 				
@@ -23,7 +23,7 @@
 		
 		<div class="clear"></div>
 		
-		<?php the_tags('<p class="post-tags"><span>'.__('Tags:','slanted').'</span> ','','</p>'); ?>
+		<?php the_tags('<p class="post-tags"><span>'.esc_html__('Tags:','slanted').'</span> ','','</p>'); ?>
 		
 		<?php if ( ot_get_option('sharrre') != 'off' ) { get_template_part('inc/sharrre'); } ?>
 		

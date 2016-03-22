@@ -3,7 +3,7 @@
 <?php if ( $related->have_posts() ): ?>
 
 <h4 class="heading">
-	<i class="fa fa-hand-o-right"></i><?php _e('You may also like...','slanted'); ?>
+	<i class="fa fa-hand-o-right"></i><?php esc_html_e('You may also like...','slanted'); ?>
 </h4>
 
 <ul class="related-posts group">
