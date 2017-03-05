@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="content">
+<div class="content">
 	
 	<div class="post-time"><?php the_time('j M, Y'); ?></div>
 	<div class="pad group">
@@ -45,7 +45,7 @@
 		<?php if ( ot_get_option('post-comments') != 'off' ) { comments_template('/comments.php',true); } ?>
 		
 	</div><!--/.pad-->
-</section><!--/.content-->
+</div><!--/.content-->
 
 <?php get_sidebar(); ?>
 

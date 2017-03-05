@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="content">
+<div class="content">
 	<div class="pad group">
 	
 	<?php if ((category_description() != '') && !is_paged()) : ?>
@@ -20,7 +20,7 @@
 	<?php endif; ?>
 	
 	</div><!--/.pad-->
-</section><!--/.content-->
+</div><!--/.content-->
 
 <?php get_sidebar(); ?>
 
