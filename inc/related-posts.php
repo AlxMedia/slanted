@@ -42,4 +42,4 @@
 </ul><!--/.post-related-->
 <?php endif; ?>
 
-<?php wp_reset_query(); ?>
+<?php wp_reset_postdata(); ?>
