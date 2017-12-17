@@ -67,7 +67,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 		// Set up defaults for row labels.
 		$this->row_label = array(
 			'type' => 'text',
-			'value' => esc_attr__( 'row', 'blogline' ),
+			'value' => esc_attr__( 'row', 'slanted' ),
 			'field' => false,
 		);
 
@@ -76,7 +76,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 
 		if ( empty( $this->button_label ) ) {
 			/* translators: %s represents the label of the row. */
-			$this->button_label = sprintf( esc_attr__( 'Add new %s', 'blogline' ), $this->row_label['value'] );
+			$this->button_label = sprintf( esc_attr__( 'Add new %s', 'slanted' ), $this->row_label['value'] );
 		}
 
 		if ( empty( $args['fields'] ) || ! is_array( $args['fields'] ) ) {
@@ -111,7 +111,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 							array(
 								'name'              => '',
 								'echo'              => 0,
-								'show_option_none'  => esc_attr__( 'Select a Page', 'blogline' ),
+								'show_option_none'  => esc_attr__( 'Select a Page', 'slanted' ),
 								'option_none_value' => '0',
 								'selected'          => '',
 							)
@@ -217,7 +217,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 		<?php if ( isset( $this->choices['limit'] ) ) : ?>
 			<?php // @codingStandardsIgnoreLine ?>
 			<?php /* translators: %s represents the number of rows we're limiting the repeater to allow. */ ?>
-			<p class="limit"><?php printf( esc_attr__( 'Limit: %s rows', 'blogline' ), esc_html( $this->choices['limit'] ) ); ?></p>
+			<p class="limit"><?php printf( esc_attr__( 'Limit: %s rows', 'slanted' ), esc_html( $this->choices['limit'] ) ); ?></p>
 		<?php endif; ?>
 		<button class="button-secondary repeater-add"><?php echo esc_html( $this->button_label ); ?></button>
 
@@ -346,7 +346,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 								<label>
 									<# if ( field.label ) { #><span class="customize-control-title">{{{ field.label }}}</span><# } #>
 									<# if ( field.description ) { #><span class="description customize-control-description">{{{ field.description }}}</span><# } #>
-									<input class="color-picker-hex" type="text" maxlength="7" placeholder="<?php esc_attr_e( 'Hex Value', 'blogline' ); ?>"  value="{{{ field.default }}}" data-field="{{{ field.id }}}" {{ defaultValue }} />
+									<input class="color-picker-hex" type="text" maxlength="7" placeholder="<?php esc_attr_e( 'Hex Value', 'slanted' ); ?>"  value="{{{ field.default }}}" data-field="{{{ field.id }}}" {{ defaultValue }} />
 
 								</label>
 
@@ -363,22 +363,22 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 									<# if ( field.description ) { #><span class="description customize-control-description">{{ field.description }}</span><# } #>
 								</label>
 
-								<figure class="kirki-image-attachment" data-placeholder="<?php esc_attr_e( 'No Image Selected', 'blogline' ); ?>" >
+								<figure class="kirki-image-attachment" data-placeholder="<?php esc_attr_e( 'No Image Selected', 'slanted' ); ?>" >
 									<# if ( field.default ) { #>
 										<# var defaultImageURL = ( field.default.url ) ? field.default.url : field.default; #>
 										<img src="{{{ defaultImageURL }}}">
 									<# } else { #>
-										<?php esc_attr_e( 'No Image Selected', 'blogline' ); ?>
+										<?php esc_attr_e( 'No Image Selected', 'slanted' ); ?>
 									<# } #>
 								</figure>
 
 								<div class="actions">
-									<button type="button" class="button remove-button<# if ( ! field.default ) { #> hidden<# } #>"><?php esc_attr_e( 'Remove', 'blogline' ); ?></button>
-									<button type="button" class="button upload-button" data-label=" <?php esc_attr_e( 'Add Image', 'blogline' ); ?>" data-alt-label="<?php echo esc_attr_e( 'Change Image', 'blogline' ); ?>" >
+									<button type="button" class="button remove-button<# if ( ! field.default ) { #> hidden<# } #>"><?php esc_attr_e( 'Remove', 'slanted' ); ?></button>
+									<button type="button" class="button upload-button" data-label=" <?php esc_attr_e( 'Add Image', 'slanted' ); ?>" data-alt-label="<?php echo esc_attr_e( 'Change Image', 'slanted' ); ?>" >
 										<# if ( field.default ) { #>
-											<?php esc_attr_e( 'Change Image', 'blogline' ); ?>
+											<?php esc_attr_e( 'Change Image', 'slanted' ); ?>
 										<# } else { #>
-											<?php esc_attr_e( 'Add Image', 'blogline' ); ?>
+											<?php esc_attr_e( 'Add Image', 'slanted' ); ?>
 										<# } #>
 									</button>
 									<# if ( field.default.id ) { #>
@@ -395,22 +395,22 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 									<# if ( field.description ) { #><span class="description customize-control-description">{{ field.description }}</span><# } #>
 								</label>
 
-								<figure class="kirki-file-attachment" data-placeholder="<?php esc_attr_e( 'No File Selected', 'blogline' ); ?>" >
+								<figure class="kirki-file-attachment" data-placeholder="<?php esc_attr_e( 'No File Selected', 'slanted' ); ?>" >
 									<# if ( field.default ) { #>
 										<# var defaultFilename = ( field.default.filename ) ? field.default.filename : field.default; #>
 										<span class="file"><span class="dashicons dashicons-media-default"></span> {{ defaultFilename }}</span>
 									<# } else { #>
-										<?php esc_attr_e( 'No File Selected', 'blogline' ); ?>
+										<?php esc_attr_e( 'No File Selected', 'slanted' ); ?>
 									<# } #>
 								</figure>
 
 								<div class="actions">
 									<button type="button" class="button remove-button<# if ( ! field.default ) { #> hidden<# } #>"></button>
-									<button type="button" class="button upload-button" data-label="<?php esc_attr_e( 'Add File', 'blogline' ); ?>" data-alt-label="<?php esc_attr_e( 'Change File', 'blogline' ); ?>">
+									<button type="button" class="button upload-button" data-label="<?php esc_attr_e( 'Add File', 'slanted' ); ?>" data-alt-label="<?php esc_attr_e( 'Change File', 'slanted' ); ?>">
 										<# if ( field.default ) { #>
-											<?php esc_attr_e( 'Change File', 'blogline' ); ?>
+											<?php esc_attr_e( 'Change File', 'slanted' ); ?>
 										<# } else { #>
-											<?php esc_attr_e( 'Add File', 'blogline' ); ?>
+											<?php esc_attr_e( 'Add File', 'slanted' ); ?>
 										<# } #>
 									</button>
 									<# if ( field.default.id ) { #>
@@ -430,7 +430,7 @@ class Kirki_Control_Repeater extends Kirki_Control_Base {
 
 						</div>
 					<# }); #>
-					<button type="button" class="button-link repeater-row-remove"><?php esc_attr_e( 'Remove', 'blogline' ); ?></button>
+					<button type="button" class="button-link repeater-row-remove"><?php esc_attr_e( 'Remove', 'slanted' ); ?></button>
 				</div>
 			</li>
 		</script>

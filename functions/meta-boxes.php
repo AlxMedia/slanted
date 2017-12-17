@@ -18,7 +18,7 @@ function alx_get_meta_box( $meta_boxes ) {
 /* ------------------------------------ */	
 	$meta_boxes[] = array(
 		'id' => 'page-options',
-		'title' => esc_html__( 'Page Options', 'blogline' ),
+		'title' => esc_html__( 'Page Options', 'slanted' ),
 		'post_types' => array( 'page' ),
 		'context' => 'advanced',
 		'priority' => 'high',
@@ -27,24 +27,24 @@ function alx_get_meta_box( $meta_boxes ) {
 			array(
 				'id' => $prefix . 'heading',
 				'type' => 'text',
-				'name' => esc_html__( 'Heading', 'blogline' ),
+				'name' => esc_html__( 'Heading', 'slanted' ),
 			),
 			array(
 				'id' => $prefix . 'subheading',
 				'type' => 'text',
-				'name' => esc_html__( 'Subheading', 'blogline' ),
+				'name' => esc_html__( 'Subheading', 'slanted' ),
 			),
 			array(
 				'id' => $prefix . 'sidebar_primary',
-				'name' => esc_html__( 'Primary Sidebar', 'blogline' ),
+				'name' => esc_html__( 'Primary Sidebar', 'slanted' ),
 				'type' => 'select',
-				'placeholder' => esc_html__( 'Select a sidebar', 'blogline' ),
+				'placeholder' => esc_html__( 'Select a sidebar', 'slanted' ),
 				'options' => $sidebars_choices,
 			),
 			array(
 				'id' => $prefix . 'layout',
 				'type' => 'image_select',
-				'name' => esc_html__( 'Layout', 'blogline' ),
+				'name' => esc_html__( 'Layout', 'slanted' ),
 				'std' => 'inherit',
 				'force_delete' => false,
 				'max_file_uploads' => '4',
@@ -62,7 +62,7 @@ function alx_get_meta_box( $meta_boxes ) {
 /* ------------------------------------ */	
 	$meta_boxes[] = array(
 		'id' => 'post-options',
-		'title' => esc_html__( 'Post Options', 'blogline' ),
+		'title' => esc_html__( 'Post Options', 'slanted' ),
 		'post_types' => array( 'post' ),
 		'context' => 'advanced',
 		'priority' => 'high',
@@ -70,15 +70,15 @@ function alx_get_meta_box( $meta_boxes ) {
 		'fields' => array(
 			array(
 				'id' => $prefix . 'sidebar_primary',
-				'name' => esc_html__( 'Primary Sidebar', 'blogline' ),
+				'name' => esc_html__( 'Primary Sidebar', 'slanted' ),
 				'type' => 'select',
-				'placeholder' => esc_html__( 'Select a sidebar', 'blogline' ),
+				'placeholder' => esc_html__( 'Select a sidebar', 'slanted' ),
 				'options' => $sidebars_choices,
 			),
 			array(
 				'id' => $prefix . 'layout',
 				'type' => 'image_select',
-				'name' => esc_html__( 'Layout', 'blogline' ),
+				'name' => esc_html__( 'Layout', 'slanted' ),
 				'std' => 'inherit',
 				'force_delete' => false,
 				'max_file_uploads' => '4',
@@ -96,7 +96,7 @@ function alx_get_meta_box( $meta_boxes ) {
 /* ------------------------------------ */		
 	$meta_boxes[] = array(
 		'id' => 'format-audio',
-		'title' => esc_html__( 'Format: Audio', 'blogline' ),
+		'title' => esc_html__( 'Format: Audio', 'slanted' ),
 		'post_types' => array( 'post' ),
 		'context' => 'advanced',
 		'priority' => 'high',
@@ -105,7 +105,7 @@ function alx_get_meta_box( $meta_boxes ) {
 			array(
 				'id' => $prefix . 'audio_url',
 				'type' => 'text',
-				'name' => esc_html__( 'Audio URL', 'blogline' ),
+				'name' => esc_html__( 'Audio URL', 'slanted' ),
 			),
 		),
 	);
@@ -114,7 +114,7 @@ function alx_get_meta_box( $meta_boxes ) {
 /* ------------------------------------ */
 	$meta_boxes[] = array(
 		'id' => 'format-video',
-		'title' => esc_html__( 'Format: Video', 'blogline' ),
+		'title' => esc_html__( 'Format: Video', 'slanted' ),
 		'post_types' => array( 'post' ),
 		'context' => 'advanced',
 		'priority' => 'high',
@@ -123,7 +123,7 @@ function alx_get_meta_box( $meta_boxes ) {
 			array(
 				'id' => $prefix . 'video_url',
 				'type' => 'text',
-				'name' => esc_html__( 'Video URL', 'blogline' ),
+				'name' => esc_html__( 'Video URL', 'slanted' ),
 			),
 		),
 	);

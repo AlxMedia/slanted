@@ -21,7 +21,7 @@ class Kirki_L10n {
 	 * @access private
 	 * @var string
 	 */
-	private $textdomain = 'blogline';
+	private $textdomain = 'slanted';
 
 	/**
 	 * The theme textdomain
@@ -119,11 +119,11 @@ class Kirki_L10n {
 		global $l10n;
 		if ( isset( $l10n[ $this->get_theme_textdomain() ] ) ) {
 			// @codingStandardsIgnoreLine WordPress.Variables.GlobalVariables.OverrideProhibited
-			$l10n['blogline'] = $l10n[ $this->get_theme_textdomain() ];
+			$l10n['slanted'] = $l10n[ $this->get_theme_textdomain() ];
 		}
 
 		// Check if the domain is "kirki".
-		if ( 'blogline' === $domain ) {
+		if ( 'slanted' === $domain ) {
 			return true;
 		}
 		return $override;

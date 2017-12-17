@@ -74,10 +74,10 @@ class Kirki_Field_Spacing extends Kirki_Field_Number {
 				'right'  => ( isset( $this->default['top'] ) ),
 			),
 			'labels' => array(
-				'top'    => esc_attr__( 'Top', 'blogline' ),
-				'bottom' => esc_attr__( 'Bottom', 'blogline' ),
-				'left'   => esc_attr__( 'Left', 'blogline' ),
-				'right'  => esc_attr__( 'Right', 'blogline' ),
+				'top'    => esc_attr__( 'Top', 'slanted' ),
+				'bottom' => esc_attr__( 'Bottom', 'slanted' ),
+				'left'   => esc_attr__( 'Left', 'slanted' ),
+				'right'  => esc_attr__( 'Right', 'slanted' ),
 			),
 		);
 

@@ -56,10 +56,10 @@ class Kirki_Sections_Nested_Section extends WP_Customize_Section {
 		$array['active']         = $this->active();
 		$array['instanceNumber'] = $this->instance_number;
 
-		$array['customizeAction'] = esc_attr__( 'Customizing', 'blogline' );
+		$array['customizeAction'] = esc_attr__( 'Customizing', 'slanted' );
 		if ( $this->panel ) {
 			/* translators: The title. */
-			$array['customizeAction'] = sprintf( esc_attr__( 'Customizing &#9656; %s', 'blogline' ), esc_html( $this->manager->get_panel( $this->panel )->title ) );
+			$array['customizeAction'] = sprintf( esc_attr__( 'Customizing &#9656; %s', 'slanted' ), esc_html( $this->manager->get_panel( $this->panel )->title ) );
 		}
 		return $array;
 	}
