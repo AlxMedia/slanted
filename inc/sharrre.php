@@ -15,7 +15,7 @@
 			template: '<a class="box group" href="#"><div class="count" href="#"><i class="fa fa-plus"></i></div><div class="share"><i class="fa fa-twitter"></i></div></a>',
 			enableHover: false,
 			enableTracking: true,
-			buttons: { twitter: {via: '<?php echo esc_attr( ot_get_option('twitter-username') ); ?>'}},
+			buttons: { twitter: {via: '<?php echo esc_attr( get_theme_mod('twitter-username') ); ?>'}},
 			click: function(api, options){
 				api.simulateClick();
 				api.openPopup('twitter');

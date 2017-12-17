@@ -23,7 +23,7 @@
 			<div class="group pad">
 				
 				<?php echo alx_site_title(); ?>
-				<?php if ( ot_get_option('site-description') != 'off' ): ?><p class="site-description"><?php bloginfo( 'description' ); ?></p><?php endif; ?>
+				<?php if ( get_theme_mod( 'site-description', 'on' ) == 'on' ): ?><p class="site-description"><?php bloginfo( 'description' ); ?></p><?php endif; ?>
 				
 				<div class="clear"></div>
 				
@@ -35,8 +35,8 @@
 					</nav><!--/#nav-header-->
 				<?php endif; ?>
 				
-				<?php if ( ot_get_option('profile-image') ): ?>
-					<div class="slant-avatar"><a href="<?php echo home_url(); ?>"><img src="<?php echo ot_get_option('profile-image'); ?>" alt="" /></a></div>
+				<?php if ( get_theme_mod('profile-image') ): ?>
+					<div class="slant-avatar"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_theme_mod('profile-image'); ?>" alt="" /></a></div>
 				<?php endif; ?>
 				
 			</div><!--/.pad-->

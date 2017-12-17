@@ -13,7 +13,7 @@
 	.s1 .sidebar-toggle { display: block; }
 	
 	/* s1 expand/collapse */
-	.s1-expand .s1 { background: #32373c; position: absolute; top: 0; bottom: 0; width: 340px; margin: 0!important; z-index: 9; overflow: auto;
+	.s1-expand .s1 { background: #32373c; position: absolute; top: 0; bottom: 0; width: 340px; margin: 0!important; z-index: 99; overflow: auto;
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.1); box-shadow: 0 0 10px rgba(0,0,0,0.1);
 	-moz-transition: width .2s ease; -webkit-transition: width .2s ease; transition: width .2s ease; }	
 	.s1-expand .s1 .sidebar-content,
