@@ -819,6 +819,14 @@ h3.featured { color: #bbb; text-align: center; font-weight: 600; text-transform:
 .sharrre#pinterest .box:hover .count { color: #ca2128; }
 .sharrre#pinterest .box:hover .count { background: #ca2128; }
 
+.sharrre#linkedin .box:hover { background: #f2f8fb; }
+.sharrre#linkedin .box { border-top-color: #0077b5; }
+.sharrre#linkedin .box:hover .count:after { border-left-color: #0077b5; }
+.sharrre#linkedin .count,
+.sharrre#linkedin .share,
+.sharrre#linkedin .box:hover .count { color: #0077b5; }
+.sharrre#linkedin .box:hover .count { background: #0077b5; }
+
 /*  single : post pages
 /* ------------------------------------ */
 .post-pages { font-size: 24px; font-weight: 600; margin-bottom: 20px; }
