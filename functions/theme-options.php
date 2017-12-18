@@ -594,7 +594,7 @@ Kirki::add_field( 'alx_slanted', array(
 		'social-icon'	=> array(
 			'type'			=> 'text',
 			'label'			=> esc_attr__( 'Icon Name', 'slanted' ),
-			'description'	=> esc_attr__( 'Font Awesome icons. Ex: fa-facebook', 'slanted' ),
+			'description'	=> esc_attr__( 'Font Awesome icons. Ex: fa-facebook ', 'slanted' ) . ' <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank"><strong>' . esc_attr__( 'View All', 'slanted' ) . ' </strong></a>',
 			'default'		=> 'fa-',
 		),
 		'social-link'	=> array(
