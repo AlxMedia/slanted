@@ -688,7 +688,7 @@ add_action( 'wp_footer', 'alx_ie_js_footer', 20 );
 if ( ! function_exists( 'alx_plugins' ) ) {
 	
 	function alx_plugins() {	
-		if ( get_theme_mod('recommended-plugins') != 'off' ) { 		
+		if ( get_theme_mod('recommended-plugins','on') =='on' ) { 			
 			// Add the following plugins
 			$plugins = array(
 				array(
