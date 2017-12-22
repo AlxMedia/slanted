@@ -317,6 +317,15 @@ Kirki::add_field( 'alx_slanted', array(
 		'4'	=> get_template_directory_uri() . '/functions/images/footer-widgets-4.png',
 	),
 ) );
+// Footer: Custom Logo
+Kirki::add_field( 'alx_slanted', array(
+	'type'			=> 'image',
+	'settings'		=> 'footer-logo',
+	'label'			=> esc_attr__( 'Footer Logo', 'slanted' ),
+	'description'	=> esc_attr__( 'Upload your custom logo image', 'slanted' ),
+	'section'		=> 'footer',
+	'default'		=> '',
+) );
 // Footer: Copyright
 Kirki::add_field( 'alx_slanted', array(
 	'type'			=> 'text',
