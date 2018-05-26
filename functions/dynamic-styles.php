@@ -30,34 +30,34 @@ if ( ! function_exists( 'alx_hex2rgb' ) ) {
 
 /*  Google fonts
 /* ------------------------------------ */
-if ( ! function_exists( 'alx_google_fonts' ) ) {
+if ( ! function_exists( 'alx_enqueue_google_fonts' ) ) {
 
-	function alx_google_fonts () {
+	function alx_enqueue_google_fonts () {
 		if ( get_theme_mod('dynamic-styles', 'on') == 'on' ) {
-			if ( get_theme_mod( 'font' ) == 'titillium-web-ext' ) { echo '<link href="//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,300italic,300,600&subset=latin,latin-ext" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'droid-serif' ) { echo '<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'source-sans-pro' ) { echo '<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic,300,400italic,600&subset=latin,latin-ext" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'lato' ) { echo '<link href="//fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'raleway' ) { echo '<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'ubuntu' ) { echo '<link href="//fonts.googleapis.com/css?family=Ubuntu:400,400italic,300italic,300,700&subset=latin,latin-ext" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'ubuntu-cyr' ) { echo '<link href="//fonts.googleapis.com/css?family=Ubuntu:400,400italic,300italic,300,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'roboto' ) { echo '<link href="//fonts.googleapis.com/css?family=Roboto:400,300italic,300,400italic,700&subset=latin,latin-ext" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'roboto-cyr' ) { echo '<link href="//fonts.googleapis.com/css?family=Roboto:400,300italic,300,400italic,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">'. "\n"; }
-			/*default*/ if ( ( get_theme_mod( 'font' ) == '' ) || ( get_theme_mod( 'font' ) == 'roboto-condensed' ) ) { echo '<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700&subset=latin,latin-ext" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'roboto-condensed-cyr' ) { echo '<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'roboto-slab' ) { echo '<link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,300italic,300,400italic,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'roboto-slab-cyr' ) { echo '<link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,300italic,300,400italic,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'playfair-display' ) { echo '<link href="//fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700&subset=latin,latin-ext" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'playfair-display-cyr' ) { echo '<link href="//fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'open-sans' ) { echo '<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,600&subset=latin,latin-ext" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'open-sans-cyr' ) { echo '<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,600&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'pt-serif' ) { echo '<link href="//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">'. "\n"; }
-			if ( get_theme_mod( 'font' ) == 'pt-serif-cyr' ) { echo '<link href="//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">'. "\n"; }
+			if ( get_theme_mod( 'font' ) == 'titillium-web-ext' ) { wp_enqueue_style( 'titillium-web-ext', '//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,300italic,300,600&subset=latin,latin-ext' ); }		
+			if ( get_theme_mod( 'font' ) == 'droid-serif' )	{ wp_enqueue_style( 'droid-serif', '//fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700' ); }				
+			if ( get_theme_mod( 'font' ) == 'source-sans-pro' )	{ wp_enqueue_style( 'source-sans-pro', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic,300,400italic,600&subset=latin,latin-ext' ); }
+			if ( get_theme_mod( 'font' ) == 'lato' ) { wp_enqueue_style( 'lato', '//fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700' ); }
+			if ( get_theme_mod( 'font' ) == 'raleway' )	{ wp_enqueue_style( 'raleway', '//fonts.googleapis.com/css?family=Raleway:400,300,600' ); }
+			if ( get_theme_mod( 'font' ) == 'ubuntu' ) { wp_enqueue_style( 'ubuntu', '//fonts.googleapis.com/css?family=Ubuntu:400,400italic,300italic,300,700&subset=latin,latin-ext' ); }
+			if ( get_theme_mod( 'font' ) == 'ubuntu-cyr' ) { wp_enqueue_style( 'ubuntu-cyr', '//fonts.googleapis.com/css?family=Ubuntu:400,400italic,300italic,300,700&subset=latin,cyrillic-ext' ); }
+			if ( get_theme_mod( 'font' ) == 'roboto' ) { wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css?family=Roboto:400,300italic,300,400italic,700&subset=latin,latin-ext' ); }
+			if ( get_theme_mod( 'font' ) == 'roboto-cyr' ) { wp_enqueue_style( 'roboto-cyr', '//fonts.googleapis.com/css?family=Roboto:400,300italic,300,400italic,700&subset=latin,cyrillic-ext' ); }
+			/*default*/ if ( ( get_theme_mod( 'font' ) == '' ) || ( get_theme_mod( 'font' ) == 'roboto-condensed' ) ) { wp_enqueue_style( 'roboto-condensed', '//fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700&subset=latin,latin-ext' ); }
+			if ( get_theme_mod( 'font' ) == 'roboto-condensed-cyr' ) { wp_enqueue_style( 'roboto-condensed-cyr', '//fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700&subset=latin,cyrillic-ext' ); }
+			if ( get_theme_mod( 'font' ) == 'roboto-slab' ) { wp_enqueue_style( 'roboto-slab', '//fonts.googleapis.com/css?family=Roboto+Slab:400,300italic,300,400italic,700&subset=latin,latin-ext' ); }
+			if ( get_theme_mod( 'font' ) == 'roboto-slab-cyr' ) { wp_enqueue_style( 'roboto-slab-cyr', '//fonts.googleapis.com/css?family=Roboto+Slab:400,300italic,300,400italic,700&subset=latin,cyrillic-ext' ); }
+			if ( get_theme_mod( 'font' ) == 'playfair-display' ) { wp_enqueue_style( 'playfair-display', '//fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700&subset=latin,latin-ext' ); }
+			if ( get_theme_mod( 'font' ) == 'playfair-display-cyr' ) { wp_enqueue_style( 'playfair-display-cyr', '//fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700&subset=latin,cyrillic' ); }
+			if ( get_theme_mod( 'font' ) == 'open-sans' ) { wp_enqueue_style( 'open-sans', '//fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,600&subset=latin,latin-ext' ); }
+			if ( get_theme_mod( 'font' ) == 'open-sans-cyr' ) { wp_enqueue_style( 'open-sans-cyr', '//fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,600&subset=latin,cyrillic-ext' ); }
+			if ( get_theme_mod( 'font' ) == 'pt-serif' ) { wp_enqueue_style( 'pt-serif', '//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic&subset=latin,latin-ext' ); }
+			if ( get_theme_mod( 'font' ) == 'pt-serif-cyr' ) { wp_enqueue_style( 'pt-serif-cyr', '//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic&subset=latin,cyrillic-ext' ); }
 		}
 	}	
 	
 }
-add_action( 'wp_head', 'alx_google_fonts', 2 );	
+add_action( 'wp_enqueue_scripts', 'alx_enqueue_google_fonts' ); 
 
 
 /*  Dynamic css output
@@ -72,8 +72,7 @@ if ( ! function_exists( 'alx_dynamic_css' ) ) {
 			$color_1_rgb = alx_hex2rgb($color_1);
 			
 			// start output
-			$styles = '<style type="text/css">'."\n";
-			$styles .= '/* Dynamic CSS: For no styles in head, copy and put the css below in your custom.css or child theme\'s style.css, disable dynamic styles */'."\n";		
+			$styles = '';
 			
 			// google fonts
 			if ( get_theme_mod( 'font' ) == 'titillium-web-ext' ) { $styles .= 'body { font-family: "Titillium Web", Arial, sans-serif; }'."\n"; }
@@ -96,21 +95,21 @@ if ( ! function_exists( 'alx_dynamic_css' ) ) {
 			// container width
 			if ( get_theme_mod('container-width','720') != '720' ) {			
 				if ( get_theme_mod( 'boxed' ) ) { 
-					$styles .= '.boxed #wrapper, .container { max-width: '.get_theme_mod('container-width').'px; }'."\n";
+					$styles .= '.boxed #wrapper, .container { max-width: '.esc_attr( get_theme_mod('container-width') ).'px; }'."\n";
 				}
 				else {
-					$styles .= '.container { max-width: '.get_theme_mod('container-width').'px; }'."\n";
+					$styles .= '.container { max-width: '.esc_attr( get_theme_mod('container-width') ).'px; }'."\n";
 				}
 			}
 			// sidebar padding
 			if ( get_theme_mod('sidebar-padding','30') != '30' ) {
-				$styles .= '.sidebar .widget { padding-left: '.get_theme_mod('sidebar-padding').'px; padding-right: '.get_theme_mod('sidebar-padding').'px; }'."\n";
+				$styles .= '.sidebar .widget { padding-left: '.esc_attr( get_theme_mod('sidebar-padding') ).'px; padding-right: '.esc_attr( get_theme_mod('sidebar-padding') ).'px; }'."\n";
 			}
 			// primary color
 			if ( get_theme_mod('color-1', '#00b2d7') != '#00b2d7' ) {
 				$styles .= '
-::selection { background-color: '.get_theme_mod('color-1').'; }
-::-moz-selection { background-color: '.get_theme_mod('color-1').'; }
+::selection { background-color: '.esc_attr( get_theme_mod('color-1') ).'; }
+::-moz-selection { background-color: '.esc_attr( get_theme_mod('color-1') ).'; }
 
 a,
 .themeform label .required,
@@ -140,7 +139,7 @@ a,
 .comment-awaiting-moderation,
 .child-menu a:hover,
 .child-menu .current_page_item > a,
-.wp-pagenavi a { color: '.get_theme_mod('color-1').'; }
+.wp-pagenavi a { color: '.esc_attr( get_theme_mod('color-1') ).'; }
 
 .themeform input[type="submit"],
 .themeform button[type="submit"],
@@ -155,30 +154,30 @@ a,
 .commentlist li.comment-author-admin > .comment-body:after { background-color: '.get_theme_mod('color-1').'; }
 
 .alx-tabs-nav li.active a,
-.dark .alx-tabs-nav li.active a { border-color: '.get_theme_mod('color-1').'; }
+.dark .alx-tabs-nav li.active a { border-color: '.esc_attr( get_theme_mod('color-1') ).'; }
 
 .widget > h3 > span,
 .alx-tabs-nav li.active a,
 .comment-tabs li.active a,
 .wp-pagenavi a:hover,
 .wp-pagenavi a:active,
-.wp-pagenavi span.current { border-bottom-color: '.get_theme_mod('color-1').'!important; }				
+.wp-pagenavi span.current { border-bottom-color: '.esc_attr( get_theme_mod('color-1') ).'!important; }				
 				'."\n";
 			}		
 			// image border radius
 			if ( get_theme_mod('image-border-radius') != '0' ) {
-				$styles .= 'img { -webkit-border-radius: '.get_theme_mod('image-border-radius').'px; border-radius: '.get_theme_mod('image-border-radius').'px; }'."\n";
+				$styles .= 'img { -webkit-border-radius: '.esc_attr( get_theme_mod('image-border-radius') ).'px; border-radius: '.esc_attr( get_theme_mod('image-border-radius') ).'px; }'."\n";
 			}
 			// body background
 			if ( get_theme_mod('body-background','') != '' ) {
 				
 				$body_background = get_theme_mod('body-background');
-				$body_color = $body_background['background-color'];
-				$body_image = $body_background['background-image'];
-				$body_position = $body_background['background-position'];
-				$body_attachment = $body_background['background-attachment'];
-				$body_repeat = $body_background['background-repeat'];
-				$body_size = $body_background['background-size'];
+				$body_color = esc_attr( $body_background['background-color'] );
+				$body_image = esc_url( $body_background['background-image'] );
+				$body_position = esc_attr( $body_background['background-position'] );
+				$body_attachment = esc_attr( $body_background['background-attachment'] );
+				$body_repeat = esc_attr( $body_background['background-repeat'] );
+				$body_size = esc_attr( $body_background['background-size'] );
 				
 				if ( $body_image && $body_size == "" ) {
 					$styles .= 'body { background: '.$body_color.' url('.$body_image.') '.$body_attachment.' '.$body_position.' '.$body_repeat.'; }'."\n";
@@ -191,12 +190,9 @@ a,
 				}
 			}
 			
-			$styles .= '</style>'."\n";
-			// end output
-			
-			echo $styles;		
+			wp_add_inline_style( 'slanted-style', $styles );		
 		}
 	}
 	
 }
-add_action( 'wp_head', 'alx_dynamic_css', 100 );
+add_action( 'wp_enqueue_scripts', 'alx_dynamic_css' );

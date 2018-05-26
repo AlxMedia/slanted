@@ -36,7 +36,7 @@
 				<?php endif; ?>
 				
 				<?php if ( get_theme_mod('profile-image') ): ?>
-					<div class="slant-avatar"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_theme_mod('profile-image'); ?>" alt="" /></a></div>
+					<div class="slant-avatar"><a href="<?php echo home_url(); ?>"><img src="<?php echo esc_url( get_theme_mod('profile-image') ); ?>" alt="" /></a></div>
 				<?php endif; ?>
 				
 			</div><!--/.pad-->
