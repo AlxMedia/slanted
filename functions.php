@@ -24,7 +24,6 @@ if ( ! function_exists( 'alx_load' ) ) {
 		
 		// Load custom widgets
 		include( get_template_directory() . '/functions/widgets/alx-tabs.php' );
-		include( get_template_directory() . '/functions/widgets/alx-video.php' );
 		include( get_template_directory() . '/functions/widgets/alx-posts.php' );
 
 		// Load dynamic styles
@@ -118,7 +117,6 @@ if ( ! function_exists( 'alx_scripts' ) ) {
 		wp_enqueue_script( 'slanted-flexslider', get_template_directory_uri() . '/js/jquery.flexslider.min.js', array( 'jquery' ),'', false );
 		wp_enqueue_script( 'slanted-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ),'', true );
 		wp_enqueue_script( 'slanted-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ),'', true );
-		if ( is_singular() ) { wp_enqueue_script( 'slanted-sharrre', get_template_directory_uri() . '/js/jquery.sharrre.min.js', array( 'jquery' ),'', true ); }
 		if ( is_singular() && get_option( 'thread_comments' ) )	{ wp_enqueue_script( 'comment-reply' ); }
 	}  
 	
@@ -692,9 +690,16 @@ if ( ! function_exists( 'alx_plugins' ) ) {
 			// Add the following plugins
 			$plugins = array(
 				array(
+					'name' 				=> 'Alx Extensions',
+					'slug' 				=> 'alx-extensions',
+					'required'			=> false,
+					'force_activation' 	=> false,
+					'force_deactivation'=> false,
+				),
+				array(
 					'name' 				=> 'Meta Box',
 					'slug' 				=> 'meta-box',
-					'required'			=> true,
+					'required'			=> false,
 					'force_activation' 	=> false,
 					'force_deactivation'=> false,
 				),
@@ -715,13 +720,6 @@ if ( ! function_exists( 'alx_plugins' ) ) {
 				array(
 					'name' 				=> 'Responsive Lightbox',
 					'slug' 				=> 'responsive-lightbox',
-					'required'			=> false,
-					'force_activation' 	=> false,
-					'force_deactivation'=> false,
-				),
-				array(
-					'name' 				=> 'Contact Form 7',
-					'slug' 				=> 'contact-form-7',
 					'required'			=> false,
 					'force_activation' 	=> false,
 					'force_deactivation'=> false,

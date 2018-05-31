@@ -775,6 +775,7 @@ h3.featured { color: #bbb; text-align: center; font-weight: 600; text-transform:
 /*  single : sharrre
 /* ------------------------------------ */
 .sharrre-container { margin-bottom: 40px; }
+.sharrre-container > span { display: none; }
 .post-sharrre { margin-top: 30px; }
 .sharrre { width: 25%; float: left; }
 .sharrre .box { display: block; padding: 15px 20px; border-top: 2px solid #222; }

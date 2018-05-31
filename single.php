@@ -25,7 +25,7 @@
 		
 		<?php the_tags('<p class="post-tags"><span>'.esc_html__('Tags:','slanted').'</span> ','','</p>'); ?>
 		
-		<?php if ( get_theme_mod( 'sharrre', 'on' ) == 'on' ) { get_template_part('inc/sharrre'); } ?>
+		<?php do_action( 'alx_ext_sharrre' ); ?>
 		
 		<div class="clear"></div>
 		
