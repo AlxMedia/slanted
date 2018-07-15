@@ -1,7 +1,7 @@
 /*
 Theme Name: Slanted
 Theme URI: http://alxmedia.se/themes/slanted/
-Version: 1.0.1
+Version: 1.0.2
 Description: <a href="http://alxmedia.se/themes/slanted/">Slanted</a> is a responsive 100% high resolution theme for personal blogs. Unique toggle sidebars give a great browsing and reading experience on both tablet and mobile. The feature list is long: Unlimited accent colors, unlimited widget areas, 0-1 sidebars to the left or right that can be uniquely specified for each page or post, 300px fixed width sidebar, 0-4 footer widget columns, almost zero layout images, related posts and post nav, 5 post formats, good SEO, 3 flexible custom widgets, localisation support, social links, logo upload and many more useful admin panel features.
 Author: Alexander Agnarson
 Author URI: http://alxmedia.se
@@ -591,7 +591,67 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
 .search-expand .themeform input { width: 100%; border: 0; border-radius: 0; }
 .search-expand .themeform input:focus {  }
 
-/*  header : nav topbar
+/*  mobile : nav mobile
+/* ------------------------------------ */
+#nav-mobile.nav-container { background: transparent; width: 100%; border-top: 2px solid rgba(0,0,0,0.05); }
+#nav-mobile .nav-toggle { background: transparent; color: #fff;
+-webkit-box-shadow: inset 1px 0 0 rgba(255,255,255,0.05);
+box-shadow: inset 1px 0 0 rgba(255,255,255,0.05); }
+#nav-mobile .nav-text { color: #fff; }
+
+@media only screen and (min-width: 720px) {
+
+	/* common */
+	#nav-mobile .nav { text-align: center; margin: 22px 0 0; }
+	#nav-mobile .nav li a { color: #fff; font-weight: 600; text-transform: uppercase; }	
+	#nav-mobile .nav li a:hover { color: #fff; }
+	/* level 1 */
+	#nav-mobile .nav > li { border-right: none; margin: 0 2px; padding-bottom: 20px; font-size: 14px; text-transform: none;  }
+	#nav-mobile .nav > li:last-child { } 
+	#nav-mobile .nav > li > a { padding: 7px 14px 7px; border: 1px solid transparent; border-radius: 20px; }
+	#nav-mobile .nav > li > a:hover, 
+	#nav-mobile .nav > li:hover > a { background: transparent; color: #fff; border-color: rgba(0,0,0,0.1); }
+	#nav-mobile .nav > li.current_page_item > a, 
+	#nav-mobile .nav > li.current-menu-item > a,
+	#nav-mobile .nav > li.current-menu-ancestor > a,
+	#nav-mobile .nav > li.current-post-parent > a { background: #fff; color: #555!important; }
+	#nav-mobile .nav li.current_page_item > a, 
+	#nav-mobile .nav li.current-menu-item > a,
+	#nav-mobile .nav li.current-menu-ancestor > a,
+	#nav-mobile .nav li.current-post-parent > a { color: #555; }
+	/* level 2 & 3 */
+	#nav-mobile .nav ul { text-align: left; top: 48px; background: #fff; border-radius: 3px; }
+	#nav-mobile .nav ul:before { content:''; display: inline-block; border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 8px solid transparent; border-bottom: 8px solid #fff; position: absolute; top: -16px; left: 20px; } 
+	#nav-mobile .nav ul li > a { color: #555; }
+	#nav-mobile .nav ul li > a:hover { color: #555; }
+	#nav-mobile .nav ul li { -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03); box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
+	#nav-mobile .nav ul li:last-child { box-shadow: none; -webkit-box-shadow: none; }
+	#nav-mobile .nav ul ul { top: -10px; }
+	#nav-mobile .nav ul ul:before { display: none; }
+	
+}
+@media only screen and (max-width: 719px) {
+	
+	/* common */
+	#nav-mobile .container { padding-left: 0; }
+	#nav-mobile .nav li a { color: #fff; border-top: 1px solid rgba(0,0,0,0.06); }
+	/* level 1 */
+	#nav-mobile .nav li > a:hover { background: rgba(0,0,0,0.06); color: #fff; }
+	#nav-mobile .nav li.current_page_item > a, 
+	#nav-mobile .nav li.current-menu-item > a,
+	#nav-mobile .nav li.current-post-parent > a { background: rgba(0,0,0,0.06); color: #fff; }
+	
+}
+
+/* hide and display */
+@media only screen and (min-width: 720px) {
+	.mobile-menu #nav-mobile { display: none; }
+}
+@media only screen and (max-width: 719px) {
+	.mobile-menu #nav-header { display: none; } 
+}
+
+/*  header : nav header
 /* ------------------------------------ */
 #nav-header.nav-container { background: transparent; width: 100%; border-top: 2px solid rgba(0,0,0,0.05); }
 #nav-header .nav-toggle { background: transparent; color: #fff;

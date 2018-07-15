@@ -294,6 +294,15 @@ Kirki::add_field( 'alx_theme', array(
 	'section'		=> 'header',
 	'default'		=> '',
 ) );
+// Header: Social Links
+Kirki::add_field( 'alx_theme', array(
+	'type'			=> 'switch',
+	'settings'		=> 'header-social',
+	'label'			=> esc_attr__( 'Header Social Links', 'slanted' ),
+	'description'	=> esc_attr__( 'Social link icon buttons', 'slanted' ),
+	'section'		=> 'header',
+	'default'		=> 'on',
+) );
 // Footer: Widget Columns
 Kirki::add_field( 'alx_theme', array(
 	'type'			=> 'radio-image',
@@ -309,6 +318,15 @@ Kirki::add_field( 'alx_theme', array(
 		'3'	=> get_template_directory_uri() . '/functions/images/footer-widgets-3.png',
 		'4'	=> get_template_directory_uri() . '/functions/images/footer-widgets-4.png',
 	),
+) );
+// Footer: Social Links
+Kirki::add_field( 'alx_theme', array(
+	'type'			=> 'switch',
+	'settings'		=> 'footer-social',
+	'label'			=> esc_attr__( 'Footer Social Links', 'slanted' ),
+	'description'	=> esc_attr__( 'Social link icon buttons', 'slanted' ),
+	'section'		=> 'footer',
+	'default'		=> 'on',
 ) );
 // Footer: Custom Logo
 Kirki::add_field( 'alx_theme', array(

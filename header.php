@@ -27,6 +27,14 @@
 				
 				<div class="clear"></div>
 				
+				<?php if ( has_nav_menu('mobile') ): ?>
+					<nav class="nav-container group" id="nav-mobile">
+						<div class="nav-toggle"><i class="fa fa-bars"></i></div>
+						<div class="nav-text"><!-- put your mobile menu text here --></div>
+						<div class="nav-wrap container"><?php wp_nav_menu(array('theme_location'=>'mobile','menu_class'=>'nav group','container'=>'','menu_id' => '','fallback_cb'=> false)); ?></div>
+					</nav><!--/#nav-mobile-->
+				<?php endif; ?>
+				
 				<?php if ( has_nav_menu('header') ): ?>
 					<nav class="nav-container group" id="nav-header">
 						<div class="nav-toggle"><i class="fa fa-bars"></i></div>
@@ -46,7 +54,9 @@
 	
 	<div id="subheader">	
 		<div class="container">
-			<?php alx_social_links() ; ?>
+			<?php if ( get_theme_mod( 'header-social', 'on' ) == 'on' ): ?>
+				<?php alx_social_links() ; ?>
+			<?php endif; ?>
 		</div>
 	</div><!--/#subheader-->
 	
