@@ -599,37 +599,6 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
 box-shadow: inset 1px 0 0 rgba(255,255,255,0.05); }
 #nav-mobile .nav-text { color: #fff; }
 
-@media only screen and (min-width: 720px) {
-
-	/* common */
-	#nav-mobile .nav { text-align: center; margin: 22px 0 0; }
-	#nav-mobile .nav li a { color: #fff; font-weight: 600; text-transform: uppercase; }	
-	#nav-mobile .nav li a:hover { color: #fff; }
-	/* level 1 */
-	#nav-mobile .nav > li { border-right: none; margin: 0 2px; padding-bottom: 20px; font-size: 14px; text-transform: none;  }
-	#nav-mobile .nav > li:last-child { } 
-	#nav-mobile .nav > li > a { padding: 7px 14px 7px; border: 1px solid transparent; border-radius: 20px; }
-	#nav-mobile .nav > li > a:hover, 
-	#nav-mobile .nav > li:hover > a { background: transparent; color: #fff; border-color: rgba(0,0,0,0.1); }
-	#nav-mobile .nav > li.current_page_item > a, 
-	#nav-mobile .nav > li.current-menu-item > a,
-	#nav-mobile .nav > li.current-menu-ancestor > a,
-	#nav-mobile .nav > li.current-post-parent > a { background: #fff; color: #555!important; }
-	#nav-mobile .nav li.current_page_item > a, 
-	#nav-mobile .nav li.current-menu-item > a,
-	#nav-mobile .nav li.current-menu-ancestor > a,
-	#nav-mobile .nav li.current-post-parent > a { color: #555; }
-	/* level 2 & 3 */
-	#nav-mobile .nav ul { text-align: left; top: 48px; background: #fff; border-radius: 3px; }
-	#nav-mobile .nav ul:before { content:''; display: inline-block; border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 8px solid transparent; border-bottom: 8px solid #fff; position: absolute; top: -16px; left: 20px; } 
-	#nav-mobile .nav ul li > a { color: #555; }
-	#nav-mobile .nav ul li > a:hover { color: #555; }
-	#nav-mobile .nav ul li { -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03); box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
-	#nav-mobile .nav ul li:last-child { box-shadow: none; -webkit-box-shadow: none; }
-	#nav-mobile .nav ul ul { top: -10px; }
-	#nav-mobile .nav ul ul:before { display: none; }
-	
-}
 @media only screen and (max-width: 719px) {
 	
 	/* common */
