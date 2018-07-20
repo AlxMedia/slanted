@@ -99,24 +99,6 @@ Kirki::add_field( 'slanted_theme', array(
 	'section'		=> 'general',
 	'default'		=> 'on',
 ) );
-// General: Post Comments
-Kirki::add_field( 'slanted_theme', array(
-	'type'			=> 'switch',
-	'settings'		=> 'post-comments',
-	'label'			=> esc_attr__( 'Post Comments', 'slanted' ),
-	'description'	=> esc_attr__( 'Comments on posts', 'slanted' ),
-	'section'		=> 'general',
-	'default'		=> 'on',
-) );
-// General: Page Comments
-Kirki::add_field( 'slanted_theme', array(
-	'type'			=> 'switch',
-	'settings'		=> 'page-comments',
-	'label'			=> esc_attr__( 'Page Comments', 'slanted' ),
-	'description'	=> esc_attr__( 'Comments on pages', 'slanted' ),
-	'section'		=> 'general',
-	'default'		=> 'off',
-) );
 // General: Recommended Plugins
 Kirki::add_field( 'slanted_theme', array(
 	'type'			=> 'switch',
