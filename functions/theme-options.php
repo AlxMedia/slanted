@@ -63,15 +63,6 @@ Kirki::add_section( 'styling', array(
 /*  Add Fields
 /* ------------------------------------ */
 
-// General: Custom CSS
-Kirki::add_field( 'slanted_theme', array(
-	'type'			=> 'switch',
-	'settings'		=> 'custom',
-	'label'			=> esc_attr__( 'Custom Stylesheet', 'slanted' ),
-	'description'	=> esc_attr__( 'Load custom stylesheet (custom.css)', 'slanted' ),
-	'section'		=> 'general',
-	'default'		=> 'off',
-) );
 // General: Responsive Layout
 Kirki::add_field( 'slanted_theme', array(
 	'type'			=> 'switch',
