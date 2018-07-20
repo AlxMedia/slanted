@@ -1,6 +1,6 @@
 <?php 
-	$sidebar = alx_sidebar_primary();
-	$layout = alx_layout_class();
+	$sidebar = slanted_sidebar_primary();
+	$layout = slanted_layout_class();
 	if ( $layout != 'col-1c'):
 ?>
 

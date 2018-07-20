@@ -2,13 +2,13 @@
 	<div class="container">
 
 	<?php if ( is_home() ) : ?>
-		<h2><?php echo alx_blog_title(); ?></h2>
+		<h2><?php echo slanted_blog_title(); ?></h2>
 		
 	<?php elseif ( is_single() ): ?>
 		<h2><?php the_category(' <span>/</span> '); ?></h2>
 		
 	<?php elseif ( is_page() ): ?>
-		<h2><?php echo alx_page_title(); ?></h2>
+		<h2><?php echo slanted_page_title(); ?></h2>
 
 	<?php elseif ( is_search() ): ?>
 		<h1>

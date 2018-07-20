@@ -16,7 +16,7 @@ class AlxPosts extends WP_Widget {
 /*  Constructor
 /* ------------------------------------ */
 	function __construct() {
-		parent::__construct( false, 'AlxPosts', array('description' => 'Display posts from a category', 'classname' => 'widget_alx_posts') );;	
+		parent::__construct( false, 'AlxPosts', array('description' => 'Display posts from a category', 'classname' => 'widget_slanted_posts') );;	
 	}
 	
 /*  Widget
@@ -187,11 +187,11 @@ class AlxPosts extends WP_Widget {
 
 /*  Register widget
 /* ------------------------------------ */
-if ( ! function_exists( 'alx_register_widget_posts' ) ) {
+if ( ! function_exists( 'slanted_register_widget_posts' ) ) {
 
-	function alx_register_widget_posts() { 
+	function slanted_register_widget_posts() { 
 		register_widget( 'AlxPosts' );
 	}
 	
 }
-add_action( 'widgets_init', 'alx_register_widget_posts' );
+add_action( 'widgets_init', 'slanted_register_widget_posts' );

@@ -77,7 +77,7 @@
 					
 					<div class="grid one-half last">	
 						<?php if ( get_theme_mod( 'footer-social', 'on' ) == 'on' ): ?>
-							<?php alx_social_links() ; ?>
+							<?php slanted_social_links() ; ?>
 						<?php endif; ?>
 					</div>
 				

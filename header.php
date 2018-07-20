@@ -22,7 +22,7 @@
 		<div class="container group">
 			<div class="group pad">
 				
-				<?php echo alx_site_title(); ?>
+				<?php echo slanted_site_title(); ?>
 				<?php if ( get_theme_mod( 'site-description', 'on' ) == 'on' ): ?><p class="site-description"><?php bloginfo( 'description' ); ?></p><?php endif; ?>
 				
 				<div class="clear"></div>
@@ -55,7 +55,7 @@
 	<div id="subheader">	
 		<div class="container">
 			<?php if ( get_theme_mod( 'header-social', 'on' ) == 'on' ): ?>
-				<?php alx_social_links() ; ?>
+				<?php slanted_social_links() ; ?>
 			<?php endif; ?>
 		</div>
 	</div><!--/#subheader-->
