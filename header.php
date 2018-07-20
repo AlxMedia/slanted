@@ -22,9 +22,21 @@
 		<div class="container group">
 			<div class="group pad">
 				
-				<?php echo slanted_site_title(); ?>
-				<?php if ( get_theme_mod( 'site-description', 'on' ) == 'on' ): ?><p class="site-description"><?php bloginfo( 'description' ); ?></p><?php endif; ?>
-				
+				<?php if ( get_header_image() == '' ) : ?>
+					<?php echo slanted_site_title(); ?>
+					<?php if ( display_header_text() == true ): ?>
+						<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+					<?php endif; ?>
+				<?php endif; ?>
+			
+				<?php if ( get_header_image() ) : ?>
+					<div class="site-header">
+						<a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
+							<img class="site-image" src="<?php header_image(); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+						</a>
+					</div>
+				<?php endif; ?>
+
 				<div class="clear"></div>
 				
 				<?php if ( has_nav_menu('mobile') ): ?>

@@ -240,24 +240,6 @@ Kirki::add_field( 'slanted_theme', array(
 		'content'	=> esc_attr__( 'Below content', 'slanted' ),
 	),
 ) );
-// Header: Custom Logo
-Kirki::add_field( 'slanted_theme', array(
-	'type'			=> 'image',
-	'settings'		=> 'custom-logo',
-	'label'			=> esc_attr__( 'Custom Logo', 'slanted' ),
-	'description'	=> esc_attr__( 'Upload your custom logo image, 120px height recommended', 'slanted' ),
-	'section'		=> 'header',
-	'default'		=> '',
-) );
-// Header: Site Description
-Kirki::add_field( 'slanted_theme', array(
-	'type'			=> 'switch',
-	'settings'		=> 'site-description',
-	'label'			=> esc_attr__( 'Site Description', 'slanted' ),
-	'description'	=> esc_attr__( 'The description that appears next to your logo', 'slanted' ),
-	'section'		=> 'header',
-	'default'		=> 'on',
-) );
 // Header: Profile Avatar
 Kirki::add_field( 'slanted_theme', array(
 	'type'			=> 'image',
