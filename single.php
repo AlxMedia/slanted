@@ -2,7 +2,7 @@
 
 <div class="content">
 	
-	<div class="post-time"><?php the_time('j M, Y'); ?></div>
+	<div class="post-time"><?php the_time( get_option('date_format') ); ?></div>
 	<div class="pad group">
 		
 		<?php while ( have_posts() ): the_post(); ?>
