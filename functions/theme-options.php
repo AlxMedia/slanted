@@ -99,15 +99,6 @@ Kirki::add_field( 'slanted_theme', array(
 	'section'		=> 'general',
 	'default'		=> 'on',
 ) );
-// General: RSS Feed
-Kirki::add_field( 'slanted_theme', array(
-	'type'			=> 'text',
-	'settings'		=> 'rss-feed',
-	'label'			=> esc_attr__( 'FeedBurner URL', 'slanted' ),
-	'description'	=> esc_attr__( 'Enter your full FeedBurner URL (or any other preferred feed URL) if you wish to use FeedBurner over the standard WordPress feed e.g. http://feeds.feedburner.com/yoururlhere', 'slanted' ),
-	'section'		=> 'general',
-	'default'		=> '',
-) );
 // General: Post Comments
 Kirki::add_field( 'slanted_theme', array(
 	'type'			=> 'switch',

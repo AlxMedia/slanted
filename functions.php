@@ -519,22 +519,6 @@ if ( ! function_exists( 'slanted_body_class' ) ) {
 add_filter( 'body_class', 'slanted_body_class' );
 
 
-/*  Custom rss feed
-/* ------------------------------------ */
-if ( ! function_exists( 'slanted_feed_link' ) ) {
-
-	function slanted_feed_link( $output, $feed ) {
-		// Do not redirect comments feed
-		if ( strpos( $output, 'comments' ) )
-			return $output;
-		// Return feed url
-		return esc_attr( get_theme_mod('rss-feed',$output) );
-	}
-	
-}
-add_filter( 'feed_link', 'slanted_feed_link', 10, 2 );
-
-
 /*  Excerpt ending
 /* ------------------------------------ */
 if ( ! function_exists( 'slanted_excerpt_more' ) ) {
