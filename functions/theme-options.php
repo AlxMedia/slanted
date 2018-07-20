@@ -15,7 +15,6 @@ Kirki::add_config( 'slanted', array(
 Kirki::add_panel( 'options', array(
     'priority'    => 10,
     'title'       => esc_attr__( 'Theme Options', 'slanted' ),
-    'description' => esc_attr__( '', 'slanted' ),
 ) );
 
 /*  Add Sections
@@ -23,49 +22,41 @@ Kirki::add_panel( 'options', array(
 Kirki::add_section( 'general', array(
     'priority'    => 10,
     'title'       => esc_attr__( 'General', 'slanted' ),
-    'description' => esc_attr__( '', 'slanted' ),
 	'panel'       => 'options',
 ) );
 Kirki::add_section( 'blog', array(
     'priority'    => 20,
     'title'       => esc_attr__( 'Blog', 'slanted' ),
-    'description' => esc_attr__( '', 'slanted' ),
 	'panel'       => 'options',
 ) );
 Kirki::add_section( 'header', array(
     'priority'    => 30,
     'title'       => esc_attr__( 'Header', 'slanted' ),
-    'description' => esc_attr__( '', 'slanted' ),
 	'panel'       => 'options',
 ) );
 Kirki::add_section( 'footer', array(
     'priority'    => 40,
     'title'       => esc_attr__( 'Footer', 'slanted' ),
-    'description' => esc_attr__( '', 'slanted' ),
 	'panel'       => 'options',
 ) );
 Kirki::add_section( 'layout', array(
     'priority'    => 50,
     'title'       => esc_attr__( 'Layout', 'slanted' ),
-    'description' => esc_attr__( '', 'slanted' ),
 	'panel'       => 'options',
 ) );
 Kirki::add_section( 'sidebars', array(
     'priority'    => 60,
     'title'       => esc_attr__( 'Sidebars', 'slanted' ),
-    'description' => esc_attr__( '', 'slanted' ),
 	'panel'       => 'options',
 ) );
 Kirki::add_section( 'social', array(
     'priority'    => 70,
     'title'       => esc_attr__( 'Social Links', 'slanted' ),
-    'description' => esc_attr__( '', 'slanted' ),
 	'panel'       => 'options',
 ) );
 Kirki::add_section( 'styling', array(
     'priority'    => 80,
     'title'       => esc_attr__( 'Styling', 'slanted' ),
-    'description' => esc_attr__( '', 'slanted' ),
 	'panel'       => 'options',
 ) );
 
@@ -587,7 +578,6 @@ Kirki::add_field( 'slanted_theme', array(
 		'social-target'	=> array(
 			'type'			=> 'checkbox',
 			'label'			=> esc_attr__( 'Open in new window', 'slanted' ),
-			'description'	=> esc_attr__( '', 'slanted' ),
 			'default'		=> false,
 		),
 	)
@@ -664,7 +654,6 @@ Kirki::add_field( 'slanted_theme', array(
 	'type'			=> 'radio',
 	'settings'		=> 'sidebar-padding',
 	'label'			=> esc_attr__( 'Sidebar Width', 'slanted' ),
-	'description'	=> esc_attr__( '', 'slanted' ),
 	'section'		=> 'styling',
 	'default'		=> '30',
 	'choices'		=> array(
@@ -677,7 +666,6 @@ Kirki::add_field( 'slanted_theme', array(
 	'type'			=> 'color',
 	'settings'		=> 'color-1',
 	'label'			=> esc_attr__( 'Primary Color', 'slanted' ),
-	'description'	=> esc_attr__( '', 'slanted' ),
 	'section'		=> 'styling',
 	'default'		=> '#00b2d7',
 ) );
