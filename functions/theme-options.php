@@ -82,7 +82,7 @@ Kirki::add_field( 'slanted_theme', array(
 	'default'		=> 'on',
 ) );
 // General: Post Comments
-Kirki::add_field( 'alx_theme', array(
+Kirki::add_field( 'slanted_theme', array(
 	'type'			=> 'switch',
 	'settings'		=> 'post-comments',
 	'label'			=> esc_attr__( 'Post Comments', 'slanted' ),
@@ -91,7 +91,7 @@ Kirki::add_field( 'alx_theme', array(
 	'default'		=> 'on',
 ) );
 // General: Page Comments
-Kirki::add_field( 'alx_theme', array(
+Kirki::add_field( 'slanted_theme', array(
 	'type'			=> 'switch',
 	'settings'		=> 'page-comments',
 	'label'			=> esc_attr__( 'Page Comments', 'slanted' ),
