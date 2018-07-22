@@ -9,7 +9,7 @@ Tags: one-column, two-columns, right-sidebar, left-sidebar, custom-colors, custo
 
 == Description ==
 
-Slanted is a responsive 100% high resolution theme for personal blogs. Unique toggle sidebars give a great browsing and reading experience on both tablet and mobile. The feature list is long: Unlimited accent colors, unlimited widget areas, 0-1 sidebars to the left or right that can be uniquely specified for each page or post, 300px fixed width sidebar, 0-4 footer widget columns, almost zero layout images, related posts and post nav, 5 post formats, good SEO, 3 flexible custom widgets, localisation support, social links, logo upload and many more useful admin panel features.
+Slanted is a responsive 100% high resolution theme for personal blogs. Unique toggle sidebars give a great browsing and reading experience on both tablet and mobile. The feature list is long: Unlimited accent colors, unlimited widget areas, 0-1 sidebars to the left or right that can be uniquely specified for each page or post, 300px fixed width sidebar, 0-4 footer widget columns, almost zero layout images, related posts and post nav, 5 post formats, good SEO, 2 flexible custom widgets, localisation support, social links, logo upload and many more useful admin panel features.
 
 == Installation ==
 
