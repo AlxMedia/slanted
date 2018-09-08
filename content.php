@@ -19,7 +19,7 @@
 		
 		<?php if ( has_post_thumbnail() ): ?>
 		<div class="post-thumbnail small">
-			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail('slanted-list'); ?>
 				<?php if ( has_post_format('video') && !is_sticky() ) echo'<span class="thumb-icon small"><i class="fa fa-play"></i></span>'; ?>
 				<?php if ( has_post_format('audio') && !is_sticky() ) echo'<span class="thumb-icon small"><i class="fa fa-volume-up"></i></span>'; ?>
@@ -29,7 +29,7 @@
 		<?php endif; ?>	
 
 		<h2 class="post-title">
-			<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h2><!--/.post-title-->
 		
 		<?php if (get_theme_mod('excerpt-length','20') != '0'): ?>
