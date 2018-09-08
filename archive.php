@@ -3,11 +3,9 @@
 <div class="content">
 	<div class="pad group">
 	
-	<?php if ((category_description() != '') && !is_paged()) : ?>
-		<div class="notebox">
-			<?php echo category_description(); ?>
-		</div>
-	<?php endif; ?>
+		<?php if ( ! is_paged() ) : ?>
+			<?php the_archive_description( '<div class="notebox">', '</div>' ); ?>
+		<?php endif; ?>
 	
 	<?php if ( have_posts() ) : ?>
 			
