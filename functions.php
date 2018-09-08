@@ -65,6 +65,9 @@ if ( ! function_exists( 'slanted_setup' ) ) {
 		// Declare WooCommerce support
 		add_theme_support( 'woocommerce' );
 		
+		// Enable support for selective refresh of widgets in customizer
+		add_theme_support( 'customize-selective-refresh-widgets' );
+		
 		// Thumbnail sizes
 		add_image_size( 'slanted-small', 200, 200, true );
 		add_image_size( 'slanted-medium', 520, 292, true );
@@ -73,8 +76,8 @@ if ( ! function_exists( 'slanted_setup' ) ) {
 
 		// Custom menu areas
 		register_nav_menus( array(
-			'mobile' => 'Mobile',
-			'header' => 'Header',
+			'mobile' 	=> esc_html__( 'Mobile', 'slanted' ),
+			'header' 	=> esc_html__( 'Header', 'slanted' ),
 		) );
 	}
 	
@@ -143,7 +146,7 @@ if ( ! function_exists( 'slanted_deregister' ) ) {
 	}
 	
 }
-add_action( 'wp_print_styles', 'slanted_deregister', 100 );
+add_action( 'wp_enqueue_scripts', 'slanted_deregister', 100 );
 
 
 /*  Register sidebars
@@ -151,11 +154,11 @@ add_action( 'wp_print_styles', 'slanted_deregister', 100 );
 if ( ! function_exists( 'slanted_sidebars' ) ) {
 
 	function slanted_sidebars()	{
-		register_sidebar(array( 'name' => 'Primary','id' => 'primary','description' => "Normal full width sidebar", 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>'));
-		if ( get_theme_mod('footer-widgets') >= '1' ) { register_sidebar(array( 'name' => 'Footer 1','id' => 'footer-1', 'description' => "Widgetized footer", 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
-		if ( get_theme_mod('footer-widgets') >= '2' ) { register_sidebar(array( 'name' => 'Footer 2','id' => 'footer-2', 'description' => "Widgetized footer", 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
-		if ( get_theme_mod('footer-widgets') >= '3' ) { register_sidebar(array( 'name' => 'Footer 3','id' => 'footer-3', 'description' => "Widgetized footer", 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
-		if ( get_theme_mod('footer-widgets') >= '4' ) { register_sidebar(array( 'name' => 'Footer 4','id' => 'footer-4', 'description' => "Widgetized footer", 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }	
+		register_sidebar(array( 'name' => esc_html__('Primary','slanted'),'id' => 'primary','description' => esc_html__("Normal full width sidebar","slanted"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>'));
+		if ( get_theme_mod('footer-widgets') >= '1' ) { register_sidebar(array( 'name' => esc_html__('Footer 1','slanted'),'id' => 'footer-1', 'description' => esc_html__("Widgetized footer","slanted"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
+		if ( get_theme_mod('footer-widgets') >= '2' ) { register_sidebar(array( 'name' => esc_html__('Footer 2','slanted'),'id' => 'footer-2', 'description' => esc_html__("Widgetized footer","slanted"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
+		if ( get_theme_mod('footer-widgets') >= '3' ) { register_sidebar(array( 'name' => esc_html__('Footer 3','slanted'),'id' => 'footer-3', 'description' => esc_html__("Widgetized footer","slanted"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }
+		if ( get_theme_mod('footer-widgets') >= '4' ) { register_sidebar(array( 'name' => esc_html__('Footer 4','slanted'),'id' => 'footer-4', 'description' => esc_html__("Widgetized footer","slanted"), 'before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>')); }	
 	}
 	
 }
@@ -192,29 +195,6 @@ if ( ! function_exists( 'slanted_styles' ) ) {
 add_action( 'wp_enqueue_scripts', 'slanted_styles' );
 
 
-/*  Register custom sidebars
-/* ------------------------------------ */
-if ( ! function_exists( 'slanted_custom_sidebars' ) ) {
-
-	function slanted_custom_sidebars() {
-		if ( !get_theme_mod('sidebar-areas') =='' ) {
-			
-			$sidebars = get_theme_mod('sidebar-areas', array());
-			
-			if ( !empty( $sidebars ) ) {
-				foreach( $sidebars as $sidebar ) {
-					if ( isset($sidebar['title']) && !empty($sidebar['title']) && isset($sidebar['id']) && !empty($sidebar['id']) && ($sidebar['id'] !='sidebar-') ) {
-						register_sidebar(array('name' => ''.esc_attr( $sidebar['title'] ).'','id' => ''.esc_attr( strtolower($sidebar['id']) ).'','before_widget' => '<div id="%1$s" class="widget %2$s">','after_widget' => '</div>','before_title' => '<h3 class="group"><span>','after_title' => '</span></h3>'));
-					}
-				}
-			}
-		}
-	}
-	
-}
-add_action( 'widgets_init', 'slanted_custom_sidebars' );
-
-
 /* ------------------------------------------------------------------------- *
  *  Template functions
 /* ------------------------------------------------------------------------- */	
@@ -238,18 +218,18 @@ if ( ! function_exists( 'slanted_layout_class' ) ) {
 			// Get if set and not set to inherit
 			if ( isset($meta) && !empty($meta) && $meta != 'inherit' ) { $layout = $meta; }
 			// Else check for page-global / single-global
-			elseif ( is_single() && ( get_theme_mod('layout-single') !='inherit' ) ) $layout = get_theme_mod('layout-single',''.$default.'');
-			elseif ( is_page() && ( get_theme_mod('layout-page') !='inherit' ) ) $layout = get_theme_mod('layout-page',''.$default.'');
+			elseif ( is_single() && ( get_theme_mod('layout-single','inherit') !='inherit' ) ) $layout = get_theme_mod('layout-single',''.$default.'');
+			elseif ( is_page() && ( get_theme_mod('layout-page','inherit') !='inherit' ) ) $layout = get_theme_mod('layout-page',''.$default.'');
 			// Else get global option
 			else $layout = get_theme_mod('layout-global',''.$default.'');
 		}
 		
 		// Set layout based on page
-		elseif ( is_home() && ( get_theme_mod('layout-home') !='inherit' ) ) $layout = get_theme_mod('layout-home',''.$default.'');
-		elseif ( is_category() && ( get_theme_mod('layout-archive-category') !='inherit' ) ) $layout = get_theme_mod('layout-archive-category',''.$default.'');
-		elseif ( is_archive() && ( get_theme_mod('layout-archive') !='inherit' ) ) $layout = get_theme_mod('layout-archive',''.$default.'');
-		elseif ( is_search() && ( get_theme_mod('layout-search') !='inherit' ) ) $layout = get_theme_mod('layout-search',''.$default.'');
-		elseif ( is_404() && ( get_theme_mod('layout-404') !='inherit' ) ) $layout = get_theme_mod('layout-404',''.$default.'');
+		elseif ( is_home() && ( get_theme_mod('layout-home','inherit') !='inherit' ) ) $layout = get_theme_mod('layout-home',''.$default.'');
+		elseif ( is_category() && ( get_theme_mod('layout-archive-category','inherit') !='inherit' ) ) $layout = get_theme_mod('layout-archive-category',''.$default.'');
+		elseif ( is_archive() && ( get_theme_mod('layout-archive','inherit') !='inherit' ) ) $layout = get_theme_mod('layout-archive',''.$default.'');
+		elseif ( is_search() && ( get_theme_mod('layout-search','inherit') !='inherit' ) ) $layout = get_theme_mod('layout-search',''.$default.'');
+		elseif ( is_404() && ( get_theme_mod('layout-404','inherit') !='inherit' ) ) $layout = get_theme_mod('layout-404',''.$default.'');
 		
 		// Global option
 		else $layout = get_theme_mod('layout-global',''.$default.'');
@@ -289,7 +269,7 @@ if ( ! function_exists( 'slanted_sidebar_primary' ) ) {
 		}
 
 		// Return sidebar
-		return $sidebar;
+		return esc_attr( $sidebar );
 	}
 	
 }
@@ -323,7 +303,7 @@ if ( ! function_exists( 'slanted_sidebar_secondary' ) ) {
 		}
 
 		// Return sidebar
-		return $sidebar;
+		return esc_attr( $sidebar );
 	}
 	
 }
@@ -376,9 +356,9 @@ if ( ! function_exists( 'slanted_site_title' ) ) {
 		
 		// Text or image?
 		if ( has_custom_logo() ) {
-			$logo = '<img src="'. esc_url( $logo[0] ) .'" alt="'.get_bloginfo('name').'">';
+			$logo = '<img src="'. esc_url( $logo[0] ) .'" alt="'.esc_attr( get_bloginfo('name')).'">';
 		} else {
-			$logo = get_bloginfo('name');
+			$logo = esc_html( get_bloginfo('name') );
 		}
 		
 		$link = '<a href="'.esc_url( home_url('/') ).'" rel="home">'.$logo.'</a>';
@@ -401,12 +381,12 @@ if ( ! function_exists( 'slanted_blog_title' ) ) {
 
 	function slanted_blog_title() {
 		global $post;
-		$heading = esc_attr( get_theme_mod('blog-heading') );
-		$subheading = esc_attr( get_theme_mod('blog-subheading') );
-		if($heading) { 
+		$heading = esc_html( get_theme_mod('blog-heading') );
+		$subheading = esc_html( get_theme_mod('blog-subheading') );
+		if($heading) {
 			$title = $heading;
 		} else {
-			$title = get_bloginfo('name');
+			$title = esc_html( get_bloginfo('name') );
 		}
 		if($subheading) {
 			$title = $title.' <span>'.$subheading.'</span>';
@@ -499,8 +479,8 @@ if ( ! function_exists( 'slanted_get_featured_post_ids' ) ) {
 
 	function slanted_get_featured_post_ids() {
 		$args = array(
-			'category'		=> get_theme_mod('featured-category',''),
-			'numberposts'	=> get_theme_mod('featured-posts-count','2')
+			'category'		=> absint( get_theme_mod('featured-category','') ),
+			'numberposts'	=> absint( get_theme_mod('featured-posts-count','2')),
 		);
 		$posts = get_posts($args);
 		if ( !$posts ) return false;
@@ -510,25 +490,6 @@ if ( ! function_exists( 'slanted_get_featured_post_ids' ) ) {
 	}
 	
 }
-
-
-/* ------------------------------------------------------------------------- *
- *  Admin panel functions
-/* ------------------------------------------------------------------------- */		
-
-/*  Post formats script
-/* ------------------------------------ */
-if ( ! function_exists( 'slanted_post_formats_script' ) ) {
-
-	function slanted_post_formats_script( $hook ) {
-		// Only load on posts, pages
-		if ( !in_array($hook, array('post.php','post-new.php')) )
-			return;
-		wp_enqueue_script('post-formats', get_template_directory_uri() . '/functions/js/post-formats.js', array( 'jquery' ));
-	}
-	
-}
-add_action( 'admin_enqueue_scripts', 'slanted_post_formats_script');
 
 
 /* ------------------------------------------------------------------------- *
@@ -558,6 +519,9 @@ add_filter( 'body_class', 'slanted_body_class' );
 if ( ! function_exists( 'slanted_excerpt_more' ) ) {
 
 	function slanted_excerpt_more( $more ) {
+		if ( is_admin() ) {
+			return $more;
+		}
 		return '&#46;&#46;&#46;';
 	}
 	
@@ -570,7 +534,16 @@ add_filter( 'excerpt_more', 'slanted_excerpt_more' );
 if ( ! function_exists( 'slanted_excerpt_length' ) ) {
 
 	function slanted_excerpt_length( $length ) {
-		return get_theme_mod('excerpt-length','20',$length);
+		if ( is_admin() ) {
+			return $length;
+		}
+
+		$new_length = $length;
+		$custom_length = get_theme_mod( 'excerpt-length', '20' );
+		if ( absint( $custom_length ) > 0 ) {
+			$new_length = absint( $custom_length );
+		}
+		return $new_length;
 	}
 	
 }
@@ -607,29 +580,6 @@ if ( ! function_exists( 'slanted_embed_html_jp' ) ) {
 
 }
 add_filter( 'video_embed_html', 'slanted_embed_html_jp' );
-
-
-/*  Upscale cropped thumbnails
-/* ------------------------------------ */
-if ( ! function_exists( 'slanted_thumbnail_upscale' ) ) {
-
-	function slanted_thumbnail_upscale( $default, $orig_w, $orig_h, $new_w, $new_h, $crop ){
-		if ( !$crop ) return null; // let the wordpress default function handle this
-
-		$aspect_ratio = $orig_w / $orig_h;
-		$size_ratio = max($new_w / $orig_w, $new_h / $orig_h);
-
-		$crop_w = round($new_w / $size_ratio);
-		$crop_h = round($new_h / $size_ratio);
-
-		$s_x = floor( ($orig_w - $crop_w) / 2 );
-		$s_y = floor( ($orig_h - $crop_h) / 2 );
-
-		return array( 0, 0, (int) $s_x, (int) $s_y, (int) $new_w, (int) $new_h, (int) $crop_w, (int) $crop_h );
-	}
-	
-}
-add_filter( 'image_resize_dimensions', 'slanted_thumbnail_upscale', 10, 6 );
 
 
 /* ------------------------------------------------------------------------- *
@@ -672,6 +622,39 @@ if ( ! function_exists( 'slanted_html_js_class' ) ) {
 add_action( 'wp_head', 'slanted_html_js_class', 1 );
 
 
+/*  Admin panel css
+/* ------------------------------------ */
+if ( ! function_exists( 'slanted_admin_panel_css' ) ) {
+	
+	function slanted_admin_panel_css() {
+		global $pagenow;
+		if ( 'post.php' === $pagenow || 'post-new.php' === $pagenow ) {
+			echo '<style>
+				.rwmb-image-select { width: auto!important; height: auto!important; }
+				.rwmb-text { width: 100%; }
+			</style>';
+		}
+	}
+
+}
+add_action( 'admin_head', 'slanted_admin_panel_css' );
+
+
+/*  Admin panel widget css
+/* ------------------------------------ */
+if ( ! function_exists( 'slanted_admin_panel_widget_css' ) ) {
+	
+	function slanted_admin_panel_widget_css( $hook ) {
+		if ( 'widgets.php' != $hook ) {
+			return;
+		}
+		wp_enqueue_style( 'slanted-widgets-admin', get_template_directory_uri().'/functions/widgets/widgets.css' );
+	}
+
+}
+add_action( 'admin_enqueue_scripts', 'slanted_admin_panel_widget_css' );
+
+
 /*  TGM plugin activation
 /* ------------------------------------ */
 if ( ! function_exists( 'slanted_plugins' ) ) {
@@ -681,39 +664,24 @@ if ( ! function_exists( 'slanted_plugins' ) ) {
 			// Add the following plugins
 			$plugins = array(
 				array(
-					'name' 				=> 'Alx Extensions',
-					'slug' 				=> 'alx-extensions',
-					'required'			=> false,
-					'force_activation' 	=> false,
-					'force_deactivation'=> false,
+					'name' => esc_html__( 'Alx Extensions', 'slanted' ),
+					'slug' => 'alx-extensions',
 				),
 				array(
-					'name' 				=> 'Meta Box',
-					'slug' 				=> 'meta-box',
-					'required'			=> false,
-					'force_activation' 	=> false,
-					'force_deactivation'=> false,
+					'name' => esc_html__( 'Meta Box', 'slanted' ),
+					'slug' => 'meta-box',
 				),
 				array(
-					'name' 				=> 'Regenerate Thumbnails',
-					'slug' 				=> 'regenerate-thumbnails',
-					'required'			=> false,
-					'force_activation' 	=> false,
-					'force_deactivation'=> false,
+					'name' => esc_html__( 'Regenerate Thumbnails', 'slanted' ),
+					'slug' => 'regenerate-thumbnails',
 				),
 				array(
-					'name' 				=> 'WP-PageNavi',
-					'slug' 				=> 'wp-pagenavi',
-					'required'			=> false,
-					'force_activation' 	=> false,
-					'force_deactivation'=> false,
+					'name' => esc_html__( 'WP-PageNavi', 'slanted' ),
+					'slug' => 'wp-pagenavi',
 				),
 				array(
-					'name' 				=> 'Responsive Lightbox',
-					'slug' 				=> 'responsive-lightbox',
-					'required'			=> false,
-					'force_activation' 	=> false,
-					'force_deactivation'=> false,
+					'name' => esc_html__( 'Responsive Lightbox', 'slanted' ),
+					'slug' => 'responsive-lightbox',
 				)
 			);	
 			tgmpa( $plugins );
@@ -738,17 +706,6 @@ remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wr
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 add_action('woocommerce_before_main_content', 'slanted_wc_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'slanted_wc_wrapper_end', 10);
-
-
-/*  Admin panel css
-/* ------------------------------------ */
-function slanted_admin_panel_css() {
-	echo '<style>
-.rwmb-image-select { width: auto!important; height: auto!important; }
-.rwmb-text { width: 100%; }
-	</style>';
-}
-add_action('admin_head', 'slanted_admin_panel_css');
 
 
 /* ------------------------------------------------------------------------- *
