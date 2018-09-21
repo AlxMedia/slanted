@@ -2,7 +2,7 @@
 Contributors: alxmedia
 Requires at least: 4.9
 Tested up to: 4.9
-Version: 1.0.4
+Version: 1.0.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0
 Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, custom-colors, custom-menu, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, custom-logo, custom-header, custom-background
@@ -59,7 +59,18 @@ Screenshot images
 License: CC0 1.0 Universal (CC0 1.0)
 Source: http://pixabay.com/
 
+Header images
+1. ID 1063100 - https://pixabay.com/en/fashion-woman-adult-beauty-model-1063100/ - CC0 1.0 Universal (CC0 1.0)
+
+Content images
+1. ID 677770 - https://pixabay.com/en/person-male-man-looking-sitting-677770/ - CC0 1.0 Universal (CC0 1.0)
+2. ID 336475 - https://pixabay.com/en/new-york-city-brooklyn-bridge-night-336475/ - CC0 1.0 Universal (CC0 1.0)
+
 == Changelog ==
+
+= 1.0.5 - 2018-09-21 =
+* Added screenshot images to readme
+* Updated theme screenshot
 
 = 1.0.4 - 2018-09-08 =
 * Moved plugin territory features to companion plugin
