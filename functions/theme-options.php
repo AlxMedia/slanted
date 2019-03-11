@@ -16,7 +16,7 @@ Kirki::add_section( 'morelink', array(
 	'title'       => esc_html__( 'AlxMedia', 'slanted' ),
 	'type'        => 'link',
 	'button_text' => esc_html__( 'View More Themes', 'slanted' ),
-	'button_url'  => 'http://alxmedia.se/themes/',
+	'button_url'  => 'http://alx.media/themes/',
 	'priority'    => 13,
 ) );
 Kirki::add_section( 'reviewlink', array(
