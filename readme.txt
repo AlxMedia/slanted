@@ -61,14 +61,14 @@ Source: https://github.com/aristath/kirki
 
 Screenshot images
 License: CC0 1.0 Universal (CC0 1.0)
-Source: http://pixabay.com/
+Source: https://stocksnap.io
 
 Header images
-1. ID 1063100 - https://pixabay.com/en/fashion-woman-adult-beauty-model-1063100/ - CC0 1.0 Universal (CC0 1.0)
+1. https://stocksnap.io/photo/76X7PJUIMF - CC0 1.0 Universal (CC0 1.0)
 
 Content images
-1. ID 677770 - https://pixabay.com/en/person-male-man-looking-sitting-677770/ - CC0 1.0 Universal (CC0 1.0)
-2. ID 336475 - https://pixabay.com/en/new-york-city-brooklyn-bridge-night-336475/ - CC0 1.0 Universal (CC0 1.0)
+1. https://stocksnap.io/photo/23H66MTGXA - CC0 1.0 Universal (CC0 1.0)
+2. https://stocksnap.io/photo/Y01VDYAX63 - CC0 1.0 Universal (CC0 1.0)
 
 == Changelog ==
 
