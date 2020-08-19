@@ -43,20 +43,12 @@
 
 				<div class="clear"></div>
 				
-				<?php if ( has_nav_menu('mobile') ): ?>
-					<nav class="nav-container group" id="nav-mobile">
-						<div class="nav-toggle"><i class="fas fa-bars"></i></div>
-						<div class="nav-text"><!-- put your mobile menu text here --></div>
-						<div class="nav-wrap container"><?php wp_nav_menu(array('theme_location'=>'mobile','menu_class'=>'nav group','container'=>'','menu_id' => '','fallback_cb'=> false)); ?></div>
-					</nav><!--/#nav-mobile-->
+				<?php if ( has_nav_menu('header') ): ?>
+					<?php \AlxMedia\Nav::nav_menu(array('theme_location'=>'header','menu_id' => 'nav-header','fallback_cb'=> false)); ?>
 				<?php endif; ?>
 				
-				<?php if ( has_nav_menu('header') ): ?>
-					<nav class="nav-container group" id="nav-header">
-						<div class="nav-toggle"><i class="fas fa-bars"></i></div>
-						<div class="nav-text"><!-- put your mobile menu text here --></div>
-						<div class="nav-wrap container"><?php wp_nav_menu(array('theme_location'=>'header','menu_class'=>'nav group','container'=>'','menu_id' => '','fallback_cb'=> false)); ?></div>
-					</nav><!--/#nav-header-->
+				<?php if ( has_nav_menu('mobile') ): ?>
+					<?php \AlxMedia\Nav::nav_menu(array('theme_location'=>'mobile','menu_id' => 'nav-mobile','fallback_cb'=> false)); ?>
 				<?php endif; ?>
 				
 				<?php if ( get_theme_mod('profile-image') ): ?>
