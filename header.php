@@ -44,11 +44,15 @@
 				<div class="clear"></div>
 				
 				<?php if ( has_nav_menu('header') ): ?>
-					<?php \AlxMedia\Nav::nav_menu(array('theme_location'=>'header','menu_id' => 'nav-header','fallback_cb'=> false)); ?>
+					<div id="wrap-nav-header" class="wrap-nav">
+						<?php \AlxMedia\Nav::nav_menu(array('theme_location'=>'header','menu_id' => 'nav-header','fallback_cb'=> false)); ?>
+					</div>
 				<?php endif; ?>
 				
 				<?php if ( has_nav_menu('mobile') ): ?>
-					<?php \AlxMedia\Nav::nav_menu(array('theme_location'=>'mobile','menu_id' => 'nav-mobile','fallback_cb'=> false)); ?>
+					<div id="wrap-nav-mobile" class="wrap-nav">
+						<?php \AlxMedia\Nav::nav_menu(array('theme_location'=>'mobile','menu_id' => 'nav-mobile','fallback_cb'=> false)); ?>
+					</div>
 				<?php endif; ?>
 				
 				<?php if ( get_theme_mod('profile-image') ): ?>
