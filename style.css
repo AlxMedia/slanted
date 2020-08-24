@@ -684,6 +684,7 @@ box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
 .nav-menu.mobile ul li a { color: #fff; }
 .nav-menu.mobile ul button,
 .nav-menu.mobile ul ul button { border-left: 1px solid rgba(255,255,255,0.14); }
+.nav-menu.mobile > div > ul { border-top: 1px solid rgba(255,255,255,0.14); }
 
 /* menu header styling */
 #header .nav-menu:not(.mobile) > div > ul > li > span { border: 1px solid transparent; border-radius: 20px; padding: 8px 14px; }
