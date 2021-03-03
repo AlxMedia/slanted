@@ -5,7 +5,9 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<?php endif; ?>
 	
 	<?php wp_head(); ?>
 </head>
@@ -45,13 +47,13 @@
 				
 				<?php if ( has_nav_menu('header') ): ?>
 					<div id="wrap-nav-header" class="wrap-nav">
-						<?php \AlxMedia\Nav::nav_menu(array('theme_location'=>'header','menu_id' => 'nav-header','fallback_cb'=> false)); ?>
+						<?php \Slanted\Nav::nav_menu(array('theme_location'=>'header','menu_id' => 'nav-header','fallback_cb'=> false)); ?>
 					</div>
 				<?php endif; ?>
 				
 				<?php if ( has_nav_menu('mobile') ): ?>
 					<div id="wrap-nav-mobile" class="wrap-nav">
-						<?php \AlxMedia\Nav::nav_menu(array('theme_location'=>'mobile','menu_id' => 'nav-mobile','fallback_cb'=> false)); ?>
+						<?php \Slanted\Nav::nav_menu(array('theme_location'=>'mobile','menu_id' => 'nav-mobile','fallback_cb'=> false)); ?>
 					</div>
 				<?php endif; ?>
 				
