@@ -81,6 +81,9 @@ Content images
 
 == Changelog ==
 
+= 1.2.1 - 2021-05-25 =
+* Fixed compatibility issue with custom nav and various security plugins
+
 = 1.2.0 - 2021-03-03 =
 * Fixed: mobile menu tabbing will enter in the menu even when it's closed
 * Fixed: prefix for custom menu names and classes
