@@ -1,0 +1,205 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Slanted\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-22 19:00+0100\n"
+"PO-Revision-Date: Thu Jun 09 2016 08:49:49 GMT+0200 (CEST)\n"
+"Last-Translator: Christian M. Grube <christian.grube@teiko.org>\n"
+"Language-Team: \n"
+"Language: German\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Loco-Target-Locale: de_DE"
+
+#: ../404.php:11
+msgid ""
+"The page you are trying to reach does not exist, or has been moved. Please "
+"use the menus or the search box to find what you are looking for."
+msgstr ""
+"Diese Seite existiert nicht, bzw ist nicht zu erreichen, oder wurde "
+"verschoben. Bitte verwenden Sie die Menüs oder das Suchfeld."
+
+#: ../comments.php:7
+msgid "No Responses"
+msgstr "Keine Kommentare"
+
+#: ../comments.php:7
+msgid "1 Response"
+msgstr "1 Kommentar"
+
+#: ../comments.php:7
+msgid "% Responses"
+msgstr "% Kommentare"
+
+#: ../comments.php:10
+msgid "Comments"
+msgstr "Kommentare"
+
+#: ../comments.php:11
+msgid "Pingbacks"
+msgstr "Pingbacks"
+
+#: ../footer.php:66
+msgid "All Rights Reserved."
+msgstr "Alle Rechte vorbehalten."
+
+#: ../footer.php:72
+msgid "Powered by"
+msgstr "Betrieben mit"
+
+#: ../footer.php:72
+msgid "Theme by"
+msgstr "Theme von"
+
+#: ../search.php:7
+msgid "For the term"
+msgstr "Für den Begriff"
+
+#: ../search.php:9
+msgid "Please try another search:"
+msgstr "Bitte versuchen Sie einen anderen Suche:"
+
+#: ../searchform.php:3
+msgid "To search type and hit enter"
+msgstr "Für die Suche Eingabe und Enter drücken"
+
+#: ../sidebar.php:9
+msgid "Expand Sidebar"
+msgstr "Sidebar aufklappen"
+
+#: ../single.php:17
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: ../single.php:26
+msgid "Tags:"
+msgstr "Tags:"
+
+#: ../functions/widgets/alx-tabs.php:27
+msgid "Recent Posts"
+msgstr "Letzten Artikel"
+
+#: ../functions/widgets/alx-tabs.php:28
+msgid "Popular Posts"
+msgstr "Beliebte Artikel"
+
+#: ../functions/widgets/alx-tabs.php:29
+msgid "Recent Comments"
+msgstr "Letzten Kommentare"
+
+#: ../functions/widgets/alx-tabs.php:30
+msgid "Tags"
+msgstr "Tags"
+
+#: ../functions/widgets/alx-tabs.php:187
+msgid "says:"
+msgstr "sagt:"
+
+#: ../inc/featured.php:22
+msgid "Featured"
+msgstr "Featured"
+
+#: ../inc/page-title.php:19
+msgid "Search result"
+msgstr "Suchergebnisse"
+
+#: ../inc/page-title.php:21
+msgid "Search results"
+msgstr "Suchergbnisse"
+
+#: ../inc/page-title.php:27
+msgid "Error 404."
+msgstr "Error 404."
+
+#: ../inc/page-title.php:27
+msgid "Page not found!"
+msgstr "Seite nicht gefunden!"
+
+#: ../inc/page-title.php:31
+msgid "Author:"
+msgstr "Author:"
+
+#: ../inc/page-title.php:34
+msgid "Category:"
+msgstr "Kategorie"
+
+#: ../inc/page-title.php:37
+msgid "Tagged:"
+msgstr "getagged:"
+
+#: ../inc/page-title.php:40
+msgid "Daily Archive:"
+msgstr "Tägliches Archiv:"
+
+#: ../inc/page-title.php:43
+msgid "Monthly Archive:"
+msgstr "Monatliches Archiv:"
+
+#: ../inc/page-title.php:46
+msgid "Yearly Archive:"
+msgstr "Jährliches Archiv:"
+
+#: ../inc/page-title.php:49 ../inc/page-title.php:51 ../inc/page-title.php:53
+#: ../inc/page-title.php:55 ../inc/page-title.php:57 ../inc/page-title.php:59
+#: ../inc/page-title.php:61 ../inc/page-title.php:63 ../inc/page-title.php:65
+msgid "Type:"
+msgstr "Typ:"
+
+#: ../inc/page-title.php:49
+msgid "Audio"
+msgstr "Audio"
+
+#: ../inc/page-title.php:51
+msgid "Aside"
+msgstr "Aside"
+
+#: ../inc/page-title.php:53
+msgid "Chat"
+msgstr "Chat"
+
+#: ../inc/page-title.php:55
+msgid "Gallery"
+msgstr "Gallerie"
+
+#: ../inc/page-title.php:57
+msgid "Image"
+msgstr "Bild"
+
+#: ../inc/page-title.php:59
+msgid "Link"
+msgstr "Link"
+
+#: ../inc/page-title.php:61
+msgid "Quote"
+msgstr "Quote"
+
+#: ../inc/page-title.php:63
+msgid "Status"
+msgstr "Status"
+
+#: ../inc/page-title.php:65
+msgid "Video"
+msgstr "Video"
+
+#: ../inc/post-nav.php:3
+msgid "Next story"
+msgstr "Nächster Artikel"
+
+#: ../inc/post-nav.php:4
+msgid "Previous story"
+msgstr "Vorheriger Artikel"
+
+#: ../inc/related-posts.php:6
+msgid "You may also like..."
+msgstr "Das könnte Ihnen auch gefallen..."
