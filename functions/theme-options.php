@@ -504,7 +504,7 @@ Kirki::add_field( 'slanted_theme', array(
 	'label'			=> esc_html__( 'Create Social Links', 'slanted' ),
 	'description'	=> esc_html__( 'Create and organize your social links', 'slanted' ),
 	'section'		=> 'social',
-	'tooltip'		=> esc_html__( 'Font Awesome names:', 'slanted' ) . ' <a href="https://fontawesome.com/v5/search?s=brands" target="_blank"><strong>' . esc_html__( 'View All', 'slanted' ) . ' </strong></a>',
+	'tooltip'		=> esc_html__( 'Font Awesome names:', 'slanted' ) . ' <a href="https://fontawesome.com/search?o=r&m=free&f=brands" target="_blank"><strong>' . esc_html__( 'View All', 'slanted' ) . ' </strong></a>',
 	'row_label'		=> array(
 		'type'	=> 'text',
 		'value'	=> esc_html__('social link', 'slanted' ),
@@ -521,7 +521,7 @@ Kirki::add_field( 'slanted_theme', array(
 		'social-icon'	=> array(
 			'type'			=> 'text',
 			'label'			=> esc_html__( 'Icon Name', 'slanted' ),
-			'description'	=> esc_html__( 'Font Awesome icons. Ex: fa-facebook ', 'slanted' ) . ' <a href="https://fontawesome.com/v5/search?s=brands" target="_blank"><strong>' . esc_html__( 'View All', 'slanted' ) . ' </strong></a>',
+			'description'	=> esc_html__( 'Font Awesome icons. Ex: fa-facebook ', 'slanted' ) . ' <a href="https://fontawesome.com/search?o=r&m=free&f=brands" target="_blank"><strong>' . esc_html__( 'View All', 'slanted' ) . ' </strong></a>',
 			'default'		=> 'fa-',
 		),
 		'social-link'	=> array(
