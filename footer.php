@@ -1,19 +1,19 @@
 		</div><!--/.container-->
 	</div><!--/#page-->
 	
-	<footer id="footer" <?php if ( ot_get_option( 'dark' ) == 'on' ): ?>class="dark"<?php endif; ?>>
+	<footer id="footer" <?php if ( get_theme_mod( 'dark','off' ) == 'on' ): ?>class="dark"<?php endif; ?>>
 		
-		<?php if ( ot_get_option('footer-ads') == 'on' ): ?>
-		<section class="container" id="footer-ads">
+		<?php if ( get_theme_mod('footer-ads') == 'on' ): ?>
+		<div class="container" id="footer-ads">
 			<?php dynamic_sidebar( 'footer-ads' ); ?>
-		</section><!--/.container-->
+		</div><!--/.container-->
 		<?php endif; ?>
 			
 		<?php // footer widgets
 			$total = 4;
-			if ( ot_get_option( 'footer-widgets' ) != '' ) {
+			if ( get_theme_mod( 'footer-widgets','0' ) != '' ) {
 				
-				$total = ot_get_option( 'footer-widgets' );
+				$total = get_theme_mod( 'footer-widgets' );
 				if( $total == 1) $class = 'one-full';
 				if( $total == 2) $class = 'one-half';
 				if( $total == 3) $class = 'one-third';
@@ -25,7 +25,7 @@
 					   is_active_sidebar( 'footer-3' ) ||
 					   is_active_sidebar( 'footer-4' ) ) && $total > 0 ) 
 		{ ?>		
-		<section class="container" id="footer-widgets">
+		<div class="container" id="footer-widgets">
 			<div class="pad group">
 				<?php $i = 0; while ( $i < $total ) { $i++; ?>
 					<?php if ( is_active_sidebar( 'footer-' . $i ) ) { ?>
@@ -37,51 +37,45 @@
 					<?php } ?>
 				<?php } ?>
 			</div><!--/.pad-->
-		</section><!--/.container-->	
+		</div><!--/.container-->	
 		<?php } ?>
 		
-		<?php if ( has_nav_menu( 'footer' ) ): ?>
-			<nav class="nav-container group" id="nav-footer">
-				<div class="nav-toggle"><i class="fa fa-bars"></i></div>
-				<div class="nav-text"><!-- put your mobile menu text here --></div>
-				<div class="nav-wrap"><?php wp_nav_menu( array('theme_location'=>'footer','menu_class'=>'nav container group','container'=>'','menu_id'=>'','fallback_cb'=>false) ); ?></div>
-			</nav><!--/#nav-footer-->
-		<?php endif; ?>
-		
-		<section id="footer-bottom">
+		<div id="footer-bottom">
 			<div class="container">
-				<a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>		
+				<a id="back-to-top" href="#"><i class="fas fa-angle-up"></i></a>		
 				<div class="pad group">
 					
 					<div class="grid one-half">
 						
-						<?php if ( ot_get_option('footer-logo') ): ?>
-							<img id="footer-logo" src="<?php echo ot_get_option('footer-logo'); ?>" alt="<?php get_bloginfo('name'); ?>">
+						<?php if ( get_theme_mod('footer-logo') ): ?>
+							<img id="footer-logo" src="<?php echo esc_url( get_theme_mod('footer-logo') ); ?>" alt="<?php echo esc_attr( get_bloginfo('name')); ?>">
 						<?php endif; ?>
 						
 						<div id="copyright">
-							<?php if ( ot_get_option( 'copyright' ) ): ?>
-								<p><?php echo ot_get_option( 'copyright' ); ?></p>
+							<?php if ( get_theme_mod( 'copyright' ) ): ?>
+								<p><?php echo esc_html( get_theme_mod( 'copyright' ) ); ?></p>
 							<?php else: ?>
-								<p><?php bloginfo(); ?> &copy; <?php echo date( 'Y' ); ?>. <?php esc_html_e( 'All Rights Reserved.', 'slanted' ); ?></p>
+								<p><?php bloginfo(); ?> &copy; <?php echo esc_html( date_i18n( esc_html__( 'Y', 'slanted' ) ) ); ?>. <?php esc_html_e( 'All Rights Reserved.', 'slanted' ); ?></p>
 							<?php endif; ?>
 						</div><!--/#copyright-->
 						
-						<?php if ( ot_get_option( 'credit' ) != 'off' ): ?>
+						<?php if ( get_theme_mod( 'credit', 'on' ) == 'on' ): ?>
 						<div id="credit">
-							<p><?php esc_html_e('Powered by','slanted'); ?> <a href="http://wordpress.org" rel="nofollow">WordPress</a>. <?php esc_html_e('Theme by','slanted'); ?> <a href="http://alxmedia.se" rel="nofollow">Alx</a>.</p>
+							<p><?php esc_html_e('Powered by','slanted'); ?> <a href="http://wordpress.org" rel="nofollow">WordPress</a>. <?php esc_html_e('Theme by','slanted'); ?> <a href="http://alx.media" rel="nofollow">Alx</a>.</p>
 						</div><!--/#credit-->
 						<?php endif; ?>
 						
 					</div>
 					
 					<div class="grid one-half last">	
-						<?php alx_social_links() ; ?>
+						<?php if ( get_theme_mod( 'footer-social', 'on' ) == 'on' ): ?>
+							<?php slanted_social_links() ; ?>
+						<?php endif; ?>
 					</div>
 				
 				</div><!--/.pad-->
 			</div>
-		</section><!--/.container-->
+		</div><!--/.container-->
 		
 	</footer><!--/#footer-->
 	

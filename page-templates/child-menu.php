@@ -5,7 +5,7 @@ Template Name: Child Menu
 ?>
 <?php get_header(); ?>
 
-<section class="content">
+<div class="content">
 	<div class="pad group">
 		
 		<?php while ( have_posts() ): the_post(); ?>
@@ -19,12 +19,12 @@ Template Name: Child Menu
 				
 			</article>
 			
-			<?php if ( ot_get_option('page-comments') == 'on' ) { comments_template('/comments.php',true); } ?>
+			<?php if ( comments_open() || get_comments_number() ) :	comments_template( '/comments.php', true ); endif; ?>
 			
 		<?php endwhile; ?>
 		
 	</div><!--/.pad-->
-</section><!--/.content-->
+</div><!--/.content-->
 
 <?php get_sidebar(); ?>
 

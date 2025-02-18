@@ -1,14 +1,14 @@
 <?php if ( post_password_required() ) { return; } ?>
 
-<section id="comments" class="themeform">
+<div id="comments" class="themeform">
 	
 	<?php if ( have_comments() ) : global $wp_query; ?>
 	
 		<h3 class="heading"><?php comments_number( esc_html__( 'No Responses', 'slanted' ), esc_html__( '1 Response', 'slanted' ), esc_html__( '% Responses', 'slanted' ) ); ?></h3>
 	
 		<ul class="comment-tabs group">
-			<li class="active"><a href="#commentlist-container"><i class="fa fa-comments-o"></i><?php esc_html_e( 'Comments', 'slanted' ); ?><span><?php echo count($wp_query->comments_by_type['comment']); ?></span></a></li>
-			<li><a href="#pinglist-container"><i class="fa fa-share"></i><?php esc_html_e( 'Pingbacks', 'slanted' ); ?><span><?php echo count($wp_query->comments_by_type['pings']); ?></span></a></li>
+			<li class="active"><a href="#commentlist-container"><i class="fas fa-comments"></i><?php esc_html_e( 'Comments', 'slanted' ); ?><span><?php echo count($wp_query->comments_by_type['comment']); ?></span></a></li>
+			<li><a href="#pinglist-container"><i class="fas fa-share"></i><?php esc_html_e( 'Pingbacks', 'slanted' ); ?><span><?php echo count($wp_query->comments_by_type['pings']); ?></span></a></li>
 		</ul>
 
 		<?php if ( ! empty( $comments_by_type['comment'] ) ) { ?>
@@ -58,4 +58,4 @@
 	
 	<?php if ( comments_open() ) { comment_form(); } ?>
 
-</section><!--/#comments-->
+</div><!--/#comments-->

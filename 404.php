@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="content">
+<div class="content">
 	<div class="pad group">
 		
 		<div class="notebox">
@@ -12,7 +12,7 @@
 		</div>
 		
 	</div><!--/.pad-->
-</section><!--/.content-->
+</div><!--/.content-->
 
 <?php get_sidebar(); ?>
 
